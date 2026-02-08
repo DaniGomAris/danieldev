@@ -1,0 +1,96 @@
+/* HEADER SECTION */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 3rem 0;
+  background-color: #ffffff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+/* NAVIGATION SECTION */
+.nav {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  padding: 0 3rem 0 2.5rem;
+}
+
+/* LOGO SECTION */
+.logo-name-container {
+  position: absolute;
+  left: 3.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.logo-square {
+  width: 53px;
+  height: 53px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #00f5a0, #00d9f5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  animation: floatPulse 2s ease-in-out infinite;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+/* NAV LINKS SECTION */
+.nav-links {
+  display: flex;
+  gap: 4rem;
+  margin: 0 auto;
+}
+
+.nav-links a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #585858;
+  transform: scale(1.05);
+}
+
+/* ANIMATION SECTION */
+@keyframes floatPulse {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-4px) scale(1.03); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+.logo-square:hover {
+  animation-play-state: paused;
+}
+
+/* RESPONSIVE SECTION */
+@media (max-width: 768px) {
+  .nav { flex-direction: column; padding: 0 2rem; }
+  .logo-name-container { position: static; margin-bottom: 1rem; }
+  .nav-links { margin-left: 0; margin-right: 0; }
+}

@@ -1,0 +1,23 @@
+<!-- HEADER SECTION -->
+<header class="header">
+  <!-- NAVIGATION CONTAINER -->
+  <nav class="nav">
+    <!-- LOGO SECTION -->
+    <div class="logo-name-container">
+      <div class="logo-square">
+        <img src="logo.jpg" alt="Logo" class="logo">
+      </div>
+      <span class="name">Daniel Gomez</span>
+    </div>
+
+    <!-- NAVIGATION LINKS SECTION -->
+    <div class="nav-links"> 
+      <a routerLink="/home" (click)="scroll('home')">Inicio</a>
+      <a routerLink="/about" (click)="scroll('about')">Sobre Mi</a>
+      <a routerLink="/projects" (click)="scroll('projects')">Proyectos</a>
+      <a routerLink="/blog" (click)="scroll('blog')">Blog</a>
+      <a routerLink="/certifications" (click)="scroll('certifications')">Certificaciones</a>
+      <a routerLink="/contact" (click)="scroll('contact')">Contacto</a>
+    </div>
+  </nav>
+</header>
