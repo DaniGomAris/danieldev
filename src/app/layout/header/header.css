@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 0.75rem 2rem;  /* compacto y proporcional */
   background-color: #ffffff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   display: flex;
@@ -13,7 +13,7 @@
   z-index: 1000;
 }
 
-/* LOGO + NOMBRE */
+/* icon and name */
 .logo-name-container {
   display: flex;
   align-items: center;
@@ -21,8 +21,8 @@
 }
 
 .logo-square {
-  width: 50px;
-  height: 50px;
+  width: 3rem;   
+  height: 3rem;
   border-radius: 12px;
   overflow: hidden;
   background: linear-gradient(135deg, #00f5a0, #00d9f5);
@@ -33,6 +33,10 @@
   animation: floatPulse 2s ease-in-out infinite;
 }
 
+.logo-square:hover {
+  animation-play-state: paused;
+}
+
 .logo {
   width: 100%;
   height: 100%;
@@ -41,23 +45,21 @@
 
 .name {
   font-weight: 900;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
-/* NAV LINKS CENTRADOS */
+/* NAV LINKS */
 .nav-links {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%); /* centra horizontalmente */
   display: flex;
   gap: 2rem;
+  margin: 0 auto; 
 }
 
 .nav-links a {
-  color: #000;
+  color: #000000;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1em;
+  font-size: 1rem;
   cursor: pointer;
   transition: color 0.3s ease, transform 0.2s ease;
 }
@@ -67,23 +69,29 @@
   transform: scale(1.05);
 }
 
-/* ANIMACIÓN LOGO */
+/* Logo animation */
 @keyframes floatPulse {
   0% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-4px) scale(1.03); }
   100% { transform: translateY(0) scale(1); }
 }
 
-.logo-square:hover {
-  animation-play-state: paused;
-}
-
-/* RESPONSIVE */
+/* Responsive header */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
+    flex-direction: column; 
     align-items: flex-start;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .logo-square {
+    width: 2.5rem; 
+    height: 2.5rem;
+  }
+
+  .name {
+    font-size: 1rem;
   }
 
   .nav-links {
@@ -91,7 +99,7 @@
     transform: none;
     flex-direction: column;
     width: 100%;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
   }
 }
