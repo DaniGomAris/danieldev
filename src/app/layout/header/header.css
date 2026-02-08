@@ -1,34 +1,23 @@
-/* HEADER SECTION */
+/* HEADER */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 0; /* reducido para que no se vea gigante */
+  padding: 1rem 2rem;
   background-color: #ffffff;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   display: flex;
-  justify-content: center;
-}
-
-/* NAVIGATION SECTION */
-.nav {
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
   align-items: center;
-  padding: 0 1.5rem; /* padding responsivo */
-  position: relative;
+  justify-content: flex-start; /* logo a la izquierda */
+  z-index: 1000;
 }
 
-/* LOGO SECTION */
+/* LOGO + NOMBRE */
 .logo-name-container {
   display: flex;
   align-items: center;
-  gap: 0.8rem; /* reducido para móviles */
+  gap: 0.8rem;
 }
 
 .logo-square {
@@ -40,7 +29,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
   animation: floatPulse 2s ease-in-out infinite;
 }
 
@@ -50,23 +39,25 @@
   object-fit: cover;
 }
 
-/* TIPOGRAFÍA RESPONSIVE */
 .name {
   font-weight: 900;
-  font-size: 1.2em; /* relativo al body, no vw/rem fijos */
+  font-size: 1.2em;
 }
 
+/* NAV LINKS CENTRADOS */
 .nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* centra horizontalmente */
   display: flex;
-  gap: 2rem; /* espacio controlado */
-  margin: 0 auto;
+  gap: 2rem;
 }
 
 .nav-links a {
-  color: #000000;
+  color: #000;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1em; /* tamaño consistente */
+  font-size: 1em;
   cursor: pointer;
   transition: color 0.3s ease, transform 0.2s ease;
 }
@@ -76,7 +67,7 @@
   transform: scale(1.05);
 }
 
-/* ANIMATION SECTION */
+/* ANIMACIÓN LOGO */
 @keyframes floatPulse {
   0% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-4px) scale(1.03); }
@@ -87,9 +78,20 @@
   animation-play-state: paused;
 }
 
-/* RESPONSIVE SECTION */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .nav { flex-direction: column; padding: 0 1rem; }
-  .logo-name-container { margin-bottom: 0.5rem; }
-  .nav-links { flex-direction: column; gap: 1rem; margin: 0; }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
 }
