@@ -5,14 +5,15 @@
   box-sizing: border-box;
 }
 
-/* Header top*/
+/* Header top */
 :root {
   --header-height: 80px;
 }
 
-/* Scroll*/
+/* Scroll */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden; /* prevent horizontal scroll on phones */
 }
 
 /* Base */
@@ -29,20 +30,24 @@ html, body {
   overflow-x: hidden;
 }
 
-/*  safe-area */
+/* Safe-area */
 main {
   padding-top: calc(var(--header-height) + env(safe-area-inset-top));
 }
 
-/* Evita que las secciones queden tapadas al hacer scroll */
+/* Avoid header overlap when scrolling to anchors */
 section {
   scroll-margin-top: calc(var(--header-height) + env(safe-area-inset-top));
   padding: 1px 24px;
 }
 
-/* Mobile*/
+/* Mobile */
 @media (max-width: 768px) {
   :root {
     --header-height: 80px;
+  }
+
+  section {
+    padding: 1px 16px; /* smaller side padding on phones */
   }
 }

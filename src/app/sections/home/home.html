@@ -7,12 +7,12 @@
         Soy <span>Daniel Gómez</span>
       </h1>
 
-      <h2>Desarrollador FullStack con experiencia en Python</h2>
+      <h2>Desarrollador Jr FullStack con experiencia en Python</h2>
 
       <p>
         Cuento con conocimientos en Python y JavaScript para desarrollo backend,
         así como en Angular para frontend. Trabajo con bases de datos
-        relacionales como MySQL y no relacionales como MongoDB y Firebase. 
+        relacionales como MySQL y no relacionales como MongoDB y Firebase.
         Tengo experiencia en despliegue de aplicaciones utilizando Railway y Vercel.
         <br /><br />
         Además, tengo experiencia utilizando Docker, Git y GitHub, y manejo
@@ -25,8 +25,8 @@
       </div>
 
       <div class="buttons">
-        <button class="primary">Más sobre mí</button>
-        <button class="secondary">Contáctame ✉️</button>
+        <button class="primary" (click)="scrollTo('about')">Más sobre mí</button>
+        <button class="secondary" (click)="scrollTo('contact')">Contáctame ✉️</button>
       </div>
     </div>
 
@@ -58,38 +58,20 @@
     <div class="stack-track">
 
       <!-- SET 1 -->
-      <div class="stack-item"><img src="angular.png"><span>Angular</span></div>
-      <div class="stack-item"><img src="css.png"><span>CSS</span></div>
-      <div class="stack-item"><img src="docker.png"><span>Docker</span></div>
-      <div class="stack-item"><img src="git.png"><span>Git</span></div>
-      <div class="stack-item"><img src="github.png"><span>GitHub</span></div>
-      <div class="stack-item"><img src="html.png"><span>HTML</span></div>
-      <div class="stack-item"><img src="javascript.png"><span>JavaScript</span></div>
-      <div class="stack-item"><img src="mongodb.png"><span>MongoDB</span></div>
-      <div class="stack-item"><img src="postman.png"><span>Postman</span></div>
-      <div class="stack-item"><img src="python.png"><span>Python</span></div>
-      <div class="stack-item"><img src="railway.png"><span>Railway</span></div>
-      <div class="stack-item"><img src="redis.png"><span>Redis</span></div>
-      <div class="stack-item"><img src="sonar.png"><span>SonarQube</span></div>
-      <div class="stack-item"><img src="vercel.png"><span>Vercel</span></div>
+      @for (t of techs; track t.name) {
+        <div class="stack-item">
+          <img [src]="t.icon" [alt]="t.name" loading="lazy" />
+          <span>{{ t.name }}</span>
+        </div>
+      }
 
-      
-
-      <!-- SET 2 (DUPLICADO EXACTO) -->
-      <div class="stack-item"><img src="angular.png"><span>Angular</span></div>
-      <div class="stack-item"><img src="css.png"><span>CSS</span></div>
-      <div class="stack-item"><img src="docker.png"><span>Docker</span></div>
-      <div class="stack-item"><img src="git.png"><span>Git</span></div>
-      <div class="stack-item"><img src="github.png"><span>GitHub</span></div>
-      <div class="stack-item"><img src="html.png"><span>HTML</span></div>
-      <div class="stack-item"><img src="javascript.png"><span>JavaScript</span></div>
-      <div class="stack-item"><img src="mongodb.png"><span>MongoDB</span></div>
-      <div class="stack-item"><img src="postman.png"><span>Postman</span></div>
-      <div class="stack-item"><img src="python.png"><span>Python</span></div>
-      <div class="stack-item"><img src="railway.png"><span>Railway</span></div>
-      <div class="stack-item"><img src="redis.png"><span>Redis</span></div>
-      <div class="stack-item"><img src="sonar.png"><span>SonarSource</span></div>
-      <div class="stack-item"><img src="vercel.png"><span>Vercel</span></div>
+      <!-- SET 2 (duplicado para loop infinito) -->
+      @for (t of techs; track t.name + '-dup') {
+        <div class="stack-item">
+          <img [src]="t.icon" [alt]="t.name" loading="lazy" />
+          <span>{{ t.name }}</span>
+        </div>
+      }
 
     </div>
   </div>

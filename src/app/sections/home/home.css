@@ -1,11 +1,12 @@
 .home {
-  padding: 6rem 4rem;
+  padding: 6rem 0;
 }
 
-/* layout principal */
+/* Main layout */
 .home-content {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 2rem;
 
   display: grid;
   grid-template-columns: 0.7fr 1fr;
@@ -13,7 +14,7 @@
   gap: 4rem;
 }
 
-/* texto */
+/* Text */
 .text h1 {
   font-size: 3.2rem;
   font-weight: 800;
@@ -38,7 +39,7 @@
   color: #4b5563;
 }
 
-/* contacto */
+/* Contact */
 .contact {
   margin-top: 1.5rem;
 }
@@ -51,7 +52,7 @@
   margin-top: 0.25rem;
 }
 
-/* botones */
+/* Buttons */
 .buttons {
   margin-top: 2rem;
   display: flex;
@@ -77,23 +78,71 @@ button {
   color: #374151;
 }
 
-/* perfil */
+/* Profile */
 .profile {
   position: relative;
   display: flex;
   justify-content: center;
 }
 
+/* Levitation animation */
+@keyframes levitate {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Glow pulse */
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* Image wrapper (main circle) */
 .image-wrapper {
+  position: relative;
   width: 390px;
-  height: 390px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
-  background: linear-gradient(135deg, #4d4d4d, #4d4d4d);
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  animation: levitate 3.6s ease-in-out infinite;
+  will-change: transform;
 }
 
+/* OUTER GREY GLOW (outside only) */
+.image-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -26px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(77, 77, 77, 0.0) 55%,
+    rgba(77, 77, 77, 0.32) 65%,
+    rgba(77, 77, 77, 0.20) 72%,
+    rgba(77, 77, 77, 0.10) 82%,
+    rgba(77, 77, 77, 0.0) 92%
+  );
+  filter: blur(18px);
+  z-index: -2;
+
+  animation: glowPulse 3.6s ease-in-out infinite;
+}
+
+/* Inner solid circle */
+.image-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4d4d4d, #4d4d4d);
+  z-index: -1;
+}
+
+/* Image */
 .image-wrapper img {
   width: 90%;
   height: 90%;
@@ -101,7 +150,7 @@ button {
   object-fit: cover;
 }
 
-/* stats */
+/* Stats (desktop floating) */
 .stats {
   position: absolute;
   right: -80px;
@@ -122,21 +171,20 @@ button {
 
 .stat .label {
   font-size: 0.9rem;
-
 }
 
-/* badge */
+/* Badge */
 .badge {
   position: absolute;
   bottom: -30px;
   background: white;
-  padding: 0.8rem 1.4rem;
+  padding: 1.4rem 1.4rem;
   border-radius: 999px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.15);
   font-weight: 600;
 }
 
-/* STACK INFINITO FULL WIDTH */
+/* Infinite stack */
 .stack {
   margin-top: 5rem;
   width: 100vw;
@@ -150,10 +198,15 @@ button {
   align-items: center;
   gap: 2rem;
   width: max-content;
+
   animation: scroll-stack 40s linear infinite;
+  will-change: transform;
 }
 
-/* item individual */
+.stack-track:hover {
+  animation-play-state: paused;
+}
+
 .stack-item {
   display: flex;
   align-items: center;
@@ -178,35 +231,77 @@ button {
   color: #374151;
 }
 
-/* animación infinita REAL */
 @keyframes scroll-stack {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
-/* responsive */
+/* Mobile */
 @media (max-width: 900px) {
+
+  .home {
+    padding: 4rem 0;
+  }
+
   .home-content {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 2.5rem;
+    padding: 0 1rem;
   }
 
-  .text p {
-    margin: 1.5rem auto;
+  .profile {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 2rem;
   }
 
-  .buttons {
-    justify-content: center;
+  .image-wrapper {
+    width: min(260px, 72vw);
+    animation-duration: 4.2s;
+  }
+
+  .image-wrapper::before {
+    inset: -18px;
+    filter: blur(12px);
+    opacity: 0.6;
   }
 
   .stats {
     position: static;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 1.5rem;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .stat {
+    padding: 0.75rem 1rem;
+    text-align: center;
+  }
+
+  .stat .number {
+    font-size: 2rem;
+  }
+
+  .stat .label {
+    font-size: 0.85rem;
+  }
+
+  .stack {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .image-wrapper,
+  .image-wrapper::before,
+  .stack-track {
+    animation: none;
   }
 }
