@@ -5,12 +5,12 @@
   box-sizing: border-box;
 }
 
-/* Altura única del header */
+/* Header top*/
 :root {
   --header-height: 80px;
 }
 
-/* Scroll suave */
+/* Scroll*/
 html {
   scroll-behavior: smooth;
 }
@@ -29,7 +29,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Compensación real del header fijo + safe-area */
+/*  safe-area */
 main {
   padding-top: calc(var(--header-height) + env(safe-area-inset-top));
 }
@@ -37,10 +37,10 @@ main {
 /* Evita que las secciones queden tapadas al hacer scroll */
 section {
   scroll-margin-top: calc(var(--header-height) + env(safe-area-inset-top));
-  padding: 60px 24px;
+  padding: 1px 24px;
 }
 
-/* Mobile (no cambia la altura del header, solo respeta el safe-area) */
+/* Mobile*/
 @media (max-width: 768px) {
   :root {
     --header-height: 80px;

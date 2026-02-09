@@ -1,3 +1,4 @@
+/* Header */
 .header {
   position: fixed;
   top: env(safe-area-inset-top);
@@ -18,7 +19,7 @@
   z-index: 1000;
 }
 
-/* logo y nombre */
+/* Logo and name */
 .logo-name-container {
   display: flex;
   align-items: center;
@@ -53,7 +54,7 @@
   color: #111111;
 }
 
-/* links desktop */
+/* Links desktop */
 .nav-links {
   position: absolute;
   left: 50%;
@@ -75,7 +76,7 @@
   transform: translateY(-1px);
 }
 
-/* burger */
+/* Burger */
 .burger {
   display: none;
   background: none;
@@ -92,7 +93,7 @@
   border-radius: 2px;
 }
 
-/* menu mobile */
+/* Menu mobile */
 @media (max-width: 768px) {
 
   .burger {
@@ -131,7 +132,7 @@
   }
 }
 
-/* animación logo */
+/* Logo animation */
 @keyframes floatPulse {
   0% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-5px) scale(1.03); }
