@@ -1,18 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+/* Reset */
 * {
   box-sizing: border-box;
 }
 
+/* Altura única del header */
+:root {
+  --header-height: 80px;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base */
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
+
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: #ffffff;
   color: #111827;
+
+  overflow-x: hidden;
 }
 
+/* Compensación real del header fijo + safe-area */
 main {
-  padding-top: 120px;
+  padding-top: calc(var(--header-height) + env(safe-area-inset-top));
+}
+
+/* Evita que las secciones queden tapadas al hacer scroll */
+section {
+  scroll-margin-top: calc(var(--header-height) + env(safe-area-inset-top));
+  padding: 60px 24px;
+}
+
+/* Mobile (no cambia la altura del header, solo respeta el safe-area) */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 80px;
+  }
 }

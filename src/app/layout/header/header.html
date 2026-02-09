@@ -1,19 +1,22 @@
 <header class="header">
-  <!-- LOGO + NOMBRE -->
   <div class="logo-name-container">
     <div class="logo-square">
-      <img src="logo.jpg" alt="Logo" class="logo">
+      <img src="logo.png" class="logo" />
     </div>
-    <span class="name">Daniel Gomez</span>
+    <span class="name">Daniel Gómez</span>
   </div>
 
-  <!-- NAV LINKS -->
-  <div class="nav-links">
-    <a routerLink="/home" (click)="scroll('home')">Inicio</a>
-    <a routerLink="/about" (click)="scroll('about')">Sobre Mi</a>
-    <a routerLink="/projects" (click)="scroll('projects')">Proyectos</a>
-    <a routerLink="/blog" (click)="scroll('blog')">Blog</a>
-    <a routerLink="/certifications" (click)="scroll('certifications')">Certificaciones</a>
-    <a routerLink="/contact" (click)="scroll('contact')">Contacto</a>
-  </div>
+  <nav class="nav-links" [class.open]="menuOpen">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <button class="burger" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </header>
