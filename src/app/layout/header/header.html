@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" #headerRoot>
   <div class="logo-name-container">
     <div class="logo-square">
       <img src="logo.png" class="logo" />
@@ -6,15 +6,22 @@
     <span class="name">Daniel Gómez</span>
   </div>
 
-  <nav class="nav-links" [class.open]="menuOpen">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
+  <nav
+    class="nav-links"
+    [class.open]="menuOpen"
+    (click)="$event.stopPropagation()"
+  >
+    <a href="#home" (click)="closeMenu()">Home</a>
+    <a href="#about" (click)="closeMenu()">About</a>
+    <a href="#projects" (click)="closeMenu()">Projects</a>
+    <a href="#blog" (click)="closeMenu()">Blog</a>
+    <a href="#contact" (click)="closeMenu()">Contact</a>
   </nav>
 
-  <button class="burger" (click)="toggleMenu()">
+  <button
+    class="burger"
+    (click)="toggleMenu(); $event.stopPropagation()"
+  >
     <span></span>
     <span></span>
     <span></span>

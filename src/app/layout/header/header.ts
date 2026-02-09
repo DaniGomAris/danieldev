@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,16 +9,25 @@ import { Component } from '@angular/core';
 })
 export class Header {
 
-  menuOpen = false;
+  @ViewChild('headerRoot') headerRoot!: ElementRef;
 
-  scroll(section: string) {
-    const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
+  menuOpen = false;
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
+  }
+
+  @HostListener('document:click', ['$event'])
+  onClickOutside(event: MouseEvent) {
+    if (!this.menuOpen) return;
+
+    const clickedInside = this.headerRoot.nativeElement.contains(event.target);
+    if (!clickedInside) {
+      this.menuOpen = false;
+    }
   }
 }
