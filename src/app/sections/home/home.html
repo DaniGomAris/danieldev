@@ -11,9 +11,9 @@
 
       <p>
         Cuento con conocimientos en Python y JavaScript para desarrollo backend,
-        así como en Angular para frontend. Trabajo con bases de datos
+        así como en Angular y Node.js para frontend. Trabajo con bases de datos
         relacionales como MySQL y no relacionales como MongoDB y Firebase.
-        Tengo experiencia en despliegue de aplicaciones utilizando Railway y Vercel.
+        Tengo experiencia en despliegue de aplicaciones utilizando Railway, Vercel y Render.
         <br /><br />
         Además, tengo experiencia utilizando Docker, Git y GitHub, y manejo
         sistemas de caché en la nube como Redis.
@@ -26,7 +26,7 @@
 
       <div class="buttons">
         <button class="primary" (click)="scrollTo('about')">Más sobre mí</button>
-        <button class="secondary" (click)="scrollTo('contact')">Contáctame ✉️</button>
+        <button class="secondary" (click)="scrollTo('contact')">Contáctame 📱</button>
       </div>
     </div>
 
@@ -65,7 +65,7 @@
         </div>
       }
 
-      <!-- SET 2 (duplicado para loop infinito) -->
+      <!-- SET 2 -->
       @for (t of techs; track t.name + '-dup') {
         <div class="stack-item">
           <img [src]="t.icon" [alt]="t.name" loading="lazy" />

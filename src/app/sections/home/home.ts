@@ -20,10 +20,12 @@ export class Home {
     { icon: 'html.png', name: 'HTML' },
     { icon: 'javascript.png', name: 'JavaScript' },
     { icon: 'mongodb.png', name: 'MongoDB' },
+    { icon: 'nodejs.png', name: 'Node.js' },
     { icon: 'postman.png', name: 'Postman' },
     { icon: 'python.png', name: 'Python' },
     { icon: 'railway.png', name: 'Railway' },
     { icon: 'redis.png', name: 'Redis' },
+    { icon: 'render.png', name: 'Render' },
     { icon: 'sonar.png', name: 'SonarQube' },
     { icon: 'vercel.png', name: 'Vercel' },
   ];
