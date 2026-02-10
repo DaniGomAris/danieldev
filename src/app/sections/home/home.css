@@ -46,7 +46,7 @@
 
 .contact a {
   display: block;
-  color: #4d4d4d;
+  color: #f59300;
   font-weight: 600;
   text-decoration: none;
   margin-top: 0.25rem;
@@ -212,10 +212,6 @@ button {
   will-change: transform;
 }
 
-.stack-track:hover {
-  animation-play-state: paused;
-}
-
 .stack-item {
   display: flex;
   align-items: center;
@@ -258,13 +254,21 @@ button {
     padding: 0 1rem;
   }
 
+  /* buttons centered side by side on mobile */
+  .buttons {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
   .profile {
     position: static;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 1rem;
+    gap: 0.6rem;
     margin-top: 2rem;
+    --badge-offset: -35px;
   }
 
   .image-wrapper {
@@ -278,22 +282,27 @@ button {
     opacity: 0.6;
   }
 
-  /* badge stays right under the image (no absolute on mobile) */
+  /* badge first (above stats) and right under image */
   .badge {
+    order: 1;
+
     position: relative;
     left: auto;
     bottom: auto;
     transform: none;
 
-    margin-top: -18px; /* pulls it closer to the circle */
-    padding: 0.75rem 1rem;
+    margin-top: var(--badge-offset);
+    padding: 1rem 1rem;
     font-size: 0.95rem;
 
     max-width: 92%;
     white-space: nowrap;
   }
 
+  /* stats second */
   .stats {
+    order: 2;
+
     position: static;
     flex-direction: row;
     flex-wrap: wrap;

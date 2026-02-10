@@ -48,6 +48,6 @@ section {
   }
 
   section {
-    padding: 1px 16px; /* smaller side padding on phones */
+    padding: 1px 1px; /* smaller side padding on phones */
   }
 }
