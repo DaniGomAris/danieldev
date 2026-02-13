@@ -1,23 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* Reset */
+/* reset */
 * {
   box-sizing: border-box;
 }
 
-/* Header top */
+/* header height variable */
 :root {
   --header-height: 80px;
 }
 
-/* Scroll */
+/* scroll */
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden; /* prevent horizontal scroll on phones */
+  overflow-x: hidden;
 }
 
-/* Base */
-html, body {
+/* base */
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -30,24 +31,19 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Safe-area */
+/* safe area for fixed header */
 main {
   padding-top: calc(var(--header-height) + env(safe-area-inset-top));
 }
 
-/* Avoid header overlap when scrolling to anchors */
+/* avoid header overlap when scrolling to anchors */
 section {
   scroll-margin-top: calc(var(--header-height) + env(safe-area-inset-top));
-  padding: 1px 24px;
 }
 
-/* Mobile */
+/* mobile */
 @media (max-width: 768px) {
   :root {
     --header-height: 80px;
-  }
-
-  section {
-    padding: 1px 1px; /* smaller side padding on phones */
   }
 }

@@ -1,1 +1,72 @@
-<p>projects works!</p>
+<section class="projects" id="projects">
+  <div class="projects-container reveal">
+
+    <div class="projects-header reveal">
+      <h2>Mis proyectos más recientes 🔥</h2>
+      <p>Algunos proyectos que he construido, universitarios y propios.</p>
+    </div>
+
+    <div class="projects-grid">
+      @for (p of projects; track p.title) {
+
+        <article class="project-card reveal">
+
+          <!-- top image -->
+          <div class="project-image">
+            <img [src]="p.image" [alt]="p.title" loading="lazy" />
+          </div>
+
+          <div class="project-body">
+
+            <!-- title + technology -->
+            <div class="project-top">
+              <h3>{{ p.title }}</h3>
+
+              @if (p.tech) {
+                <span class="project-tag">
+                  @if (p.techIcon) {
+                    <img class="tag-icon" [src]="p.techIcon" [alt]="p.tech" />
+                  }
+                  {{ p.tech }}
+                </span>
+              }
+            </div>
+
+            <!-- description -->
+            <p class="project-desc">
+              {{ p.description }}
+            </p>
+
+            <!-- buttons -->
+            <div class="project-actions">
+
+              <!-- github -->
+              <a
+                class="btn btn-ghost"
+                [href]="p.github"
+                target="_blank"
+                rel="noopener noreferrer">
+                GitHub
+              </a>
+
+              <!-- web -->
+              @if (p.web) {
+                <a
+                  class="btn btn-primary"
+                  [href]="p.web"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Web
+                </a>
+              }
+
+            </div>
+          </div>
+
+        </article>
+
+      }
+    </div>
+
+  </div>
+</section>

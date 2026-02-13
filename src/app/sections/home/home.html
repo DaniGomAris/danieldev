@@ -53,11 +53,11 @@
     </div>
   </div>
 
-  <!-- STACK INFINITO -->
+  <!-- Infinite stack -->
   <div class="stack">
     <div class="stack-track">
 
-      <!-- SET 1 -->
+      <!-- Set 1 -->
       @for (t of techs; track t.name) {
         <div class="stack-item">
           <img [src]="t.icon" [alt]="t.name" loading="lazy" />
@@ -65,7 +65,7 @@
         </div>
       }
 
-      <!-- SET 2 -->
+      <!-- Set 2 -->
       @for (t of techs; track t.name + '-dup') {
         <div class="stack-item">
           <img [src]="t.icon" [alt]="t.name" loading="lazy" />
