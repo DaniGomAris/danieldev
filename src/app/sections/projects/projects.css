@@ -34,6 +34,9 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
+
+  /* hace que todas las cards en la fila estiren igual */
+  align-items: stretch;
 }
 
 /* card */
@@ -44,6 +47,11 @@
   overflow: hidden;
   box-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  /* clave: card como columna */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card:hover {
@@ -55,6 +63,7 @@
 .project-image {
   height: 260px;
   overflow: hidden;
+  flex: 0 0 auto;
 }
 
 .project-image img {
@@ -71,6 +80,12 @@
 /* body */
 .project-body {
   padding: 1.8rem;
+
+  /* clave: el body ocupa el espacio restante */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
 }
 
 /* top row */
@@ -114,7 +129,10 @@
 
 /* buttons */
 .project-actions {
-  margin-top: 1.6rem;
+  /* clave: empuja los botones al fondo */
+  margin-top: auto;
+
+  padding-top: 1.6rem;
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
@@ -143,14 +161,31 @@
   background: #1f2937;
 }
 
+/* github button icon */
+.btn-github {
+  gap: 0.6rem;
+}
+
 /* web button */
 .btn-primary {
-  background: #2563eb;
+  background: #f59300;
   color: white;
 }
 
 .btn-primary:hover {
-  background: #1d4ed8;
+  background: #f8b34a;
+}
+
+/* button icon */
+.btn-icon {
+  height: 18px;
+  width: 18px;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.btn:hover .btn-icon {
+  transform: scale(1.15);
 }
 
 /* responsive */
@@ -203,7 +238,11 @@
   position: absolute;
   inset: -1px;
   border-radius: 22px;
-  background: radial-gradient(circle at 20% 10%, rgba(255,255,255,0.10), rgba(255,255,255,0.0) 55%);
+  background: radial-gradient(
+    circle at 20% 10%,
+    rgba(255, 255, 255, 0.10),
+    rgba(255, 255, 255, 0.0) 55%
+  );
   opacity: 0;
   transition: opacity 300ms ease;
   pointer-events: none;

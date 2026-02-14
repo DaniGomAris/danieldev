@@ -46,7 +46,7 @@
 
 .contact a {
   display: block;
-  color: #f59300;
+  color: #4d4d4d;
   font-weight: 600;
   text-decoration: none;
   margin-top: 0.25rem;
@@ -62,8 +62,14 @@
 button {
   padding: 1rem 1.6rem;
   border-radius: 999px;
-  font-weight: 1000;
+  font-weight: 700;
   cursor: pointer;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
 }
 
 .primary {
@@ -88,7 +94,7 @@ button {
 /* levitation animation */
 @keyframes levitate {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  50% { transform: translateY(-8px); }
 }
 
 /* glow pulse */
@@ -112,7 +118,7 @@ button {
   will-change: transform;
 }
 
-/* outer grey glow (outside only) */
+/* outer grey glow */
 .image-wrapper::before {
   content: '';
   position: absolute;
@@ -138,7 +144,7 @@ button {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: linear-gradient(135deg, #4d4d4d, #4d4d4d);
+  background: #4d4d4d;
   z-index: -1;
 }
 
@@ -173,12 +179,11 @@ button {
   font-size: 0.9rem;
 }
 
-/* badge (desktop) */
+/* badge */
 .badge {
   position: absolute;
   bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
+
 
   background: white;
   padding: 0.9rem 1.2rem;
@@ -241,6 +246,22 @@ button {
   to   { transform: translateX(-50%); }
 }
 
+/* scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  filter: blur(6px);
+  transition: opacity 750ms ease, transform 750ms ease, filter 750ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
 /* mobile */
 @media (max-width: 900px) {
   .home {
@@ -254,21 +275,12 @@ button {
     padding: 0 1rem;
   }
 
-  /* buttons centered side by side on mobile */
-  .buttons {
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-
   .profile {
     position: static;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    gap: 0.6rem;
+    gap: 1rem;
     margin-top: 2rem;
-    --badge-offset: -35px;
   }
 
   .image-wrapper {
@@ -282,27 +294,22 @@ button {
     opacity: 0.6;
   }
 
-  /* badge first (above stats) and right under image */
+  /* badge debajo de la imagen (mobile) */
   .badge {
-    order: 1;
-
     position: relative;
     left: auto;
     bottom: auto;
     transform: none;
 
-    margin-top: var(--badge-offset);
-    padding: 1rem 1rem;
+    margin-top: -150px;
+    padding: 0.75rem 1rem;
     font-size: 0.95rem;
 
     max-width: 92%;
     white-space: nowrap;
   }
 
-  /* stats second */
   .stats {
-    order: 2;
-
     position: static;
     flex-direction: row;
     flex-wrap: wrap;
@@ -334,7 +341,13 @@ button {
 @media (prefers-reduced-motion: reduce) {
   .image-wrapper,
   .image-wrapper::before,
-  .stack-track {
+  .stack-track,
+  .reveal,
+  .reveal.is-visible {
     animation: none;
+    transition: none;
+    transform: none;
+    filter: none;
+    opacity: 1;
   }
 }

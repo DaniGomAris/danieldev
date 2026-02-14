@@ -2,7 +2,7 @@
   <div class="projects-container reveal">
 
     <div class="projects-header reveal">
-      <h2>Mis proyectos más recientes 🔥</h2>
+      <h2>Mis proyectos 🔥</h2>
       <p>Algunos proyectos que he construido, universitarios y propios.</p>
     </div>
 
@@ -41,13 +41,20 @@
             <div class="project-actions">
 
               <!-- github -->
-              <a
-                class="btn btn-ghost"
-                [href]="p.github"
-                target="_blank"
-                rel="noopener noreferrer">
-                GitHub
-              </a>
+              @if (p.github) {
+                <a
+                  class="btn btn-ghost btn-github"
+                  [href]="p.github"
+                  target="_blank"
+                  rel="noopener noreferrer">
+
+                  <img src="githubwhite.png"
+                      alt="GitHub"
+                      class="btn-icon" />
+                  GitHub
+                </a>
+              }
+
 
               <!-- web -->
               @if (p.web) {
@@ -56,6 +63,10 @@
                   [href]="p.web"
                   target="_blank"
                   rel="noopener noreferrer">
+
+                  <img src="web.png"
+                    alt="Web"
+                    class="btn-icon" />
                   Web
                 </a>
               }

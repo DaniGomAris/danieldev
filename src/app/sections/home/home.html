@@ -1,15 +1,15 @@
-<section class="home">
+<section class="home" id="home">
 
   <div class="home-content">
-    <div class="text">
-      <h1>
+    <div class="text reveal-group">
+      <h1 class="reveal">
         ¡Hola!<br />
         Soy <span>Daniel Gómez</span>
       </h1>
 
-      <h2>Desarrollador Jr FullStack con experiencia en Python</h2>
+      <h2 class="reveal">Desarrollador Jr FullStack con experiencia en Python</h2>
 
-      <p>
+      <p class="reveal">
         Cuento con conocimientos en Python y JavaScript para desarrollo backend,
         así como en Angular y Node.js para frontend. Trabajo con bases de datos
         relacionales como MySQL y no relacionales como MongoDB y Firebase.
@@ -19,45 +19,43 @@
         sistemas de caché en la nube como Redis.
       </p>
 
-      <div class="contact">
+      <div class="contact reveal">
         <span>Contáctame 👇</span>
         <a href="mailto:dani.gom.dev@gmail.com">dani.gom.dev@gmail.com</a>
       </div>
 
-      <div class="buttons">
+      <div class="buttons reveal">
         <button class="primary" (click)="scrollTo('about')">Más sobre mí</button>
         <button class="secondary" (click)="scrollTo('contact')">Contáctame 📱</button>
       </div>
     </div>
 
-    <div class="profile">
-      <div class="image-wrapper">
+    <div class="profile reveal-group">
+      <div class="image-wrapper reveal">
         <img src="profile.png" alt="Daniel Gómez" />
       </div>
 
-      <div class="stats">
+      <div class="stats reveal">
         <div class="stat">
           <span class="number">1+</span>
-          <span class="label">Año de experiencia<br />en Python</span>
+          <span class="label">Año de experiencia<br /></span>
         </div>
 
         <div class="stat">
           <span class="number">10+</span>
-          <span class="label">Proyectos<br />Backend</span>
+          <span class="label">Proyectos<br />FullStack</span>
         </div>
       </div>
 
-      <div class="badge">
+      <div class="badge reveal">
         🏆 Certificado en Python
       </div>
     </div>
   </div>
 
-  <!-- Infinite stack -->
-  <div class="stack">
+  <div class="stack reveal">
     <div class="stack-track">
 
-      <!-- Set 1 -->
       @for (t of techs; track t.name) {
         <div class="stack-item">
           <img [src]="t.icon" [alt]="t.name" loading="lazy" />
@@ -65,7 +63,6 @@
         </div>
       }
 
-      <!-- Set 2 -->
       @for (t of techs; track t.name + '-dup') {
         <div class="stack-item">
           <img [src]="t.icon" [alt]="t.name" loading="lazy" />
