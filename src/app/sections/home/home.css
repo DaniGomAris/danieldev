@@ -46,7 +46,7 @@
 
 .contact a {
   display: block;
-  color: #4d4d4d;
+  color: #f59300;
   font-weight: 600;
   text-decoration: none;
   margin-top: 0.25rem;
@@ -57,12 +57,13 @@
   margin-top: 2rem;
   display: flex;
   gap: 1rem;
+
 }
 
 button {
-  padding: 1rem 1.6rem;
+  padding: 1rem 2.5rem;
   border-radius: 999px;
-  font-weight: 700;
+  font-weight: 800;
   cursor: pointer;
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
@@ -80,7 +81,7 @@ button:hover {
 
 .secondary {
   background: transparent;
-  border: 2px solid #6b7280;
+  border: 1px solid #c4c4c5;
   color: #374151;
 }
 
@@ -275,6 +276,19 @@ button:hover {
     padding: 0 1rem;
   }
 
+  /* buttons */
+  .buttons {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .buttons button {
+    flex: 1;              /* que ambos ocupen el mismo espacio */
+    max-width: 200px;     /* evita que se estiren demasiado */
+  }
+
+
+
   .profile {
     position: static;
     flex-direction: column;
@@ -301,7 +315,7 @@ button:hover {
     bottom: auto;
     transform: none;
 
-    margin-top: -150px;
+    margin-top: -146px;
     padding: 0.75rem 1rem;
     font-size: 0.95rem;
 

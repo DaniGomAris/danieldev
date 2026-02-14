@@ -21,6 +21,18 @@ export class Header {
     this.menuOpen = false;
   }
 
+  navigateTo(sectionId: string) {
+    const el = document.getElementById(sectionId);
+    if (!el) return;
+
+    el.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
+    this.closeMenu();
+  }
+
   @HostListener('document:click', ['$event'])
   onClickOutside(event: MouseEvent) {
     if (!this.menuOpen) return;

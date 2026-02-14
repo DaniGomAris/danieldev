@@ -11,11 +11,11 @@
     [class.open]="menuOpen"
     (click)="$event.stopPropagation()"
   >
-    <a href="#home" (click)="closeMenu()">Inicio</a>
-    <a href="#projects" (click)="closeMenu()">Proyectos</a>
-    <a href="#about" (click)="closeMenu()">Sobre mi</a>
-    <a href="#blog" (click)="closeMenu()">Blog</a>
-    <a href="#contact" (click)="closeMenu()">Contacto</a>
+    <a (click)="navigateTo('home')">Inicio</a>
+    <a (click)="navigateTo('projects')">Proyectos</a>
+    <a (click)="navigateTo('about')">Sobre mi</a>
+    <a (click)="navigateTo('blog')">Blog</a>
+    <a (click)="navigateTo('contact')">Contacto</a>
   </nav>
 
   <button

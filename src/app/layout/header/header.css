@@ -61,6 +61,7 @@
   transform: translateX(-50%);
   display: flex;
   gap: 2.5rem;
+  cursor: pointer;
 }
 
 .nav-links a {
