@@ -34,8 +34,6 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
-
-  /* hace que todas las cards en la fila estiren igual */
   align-items: stretch;
 }
 
@@ -47,8 +45,6 @@
   overflow: hidden;
   box-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
-
-  /* clave: card como columna */
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -80,8 +76,6 @@
 /* body */
 .project-body {
   padding: 1.8rem;
-
-  /* clave: el body ocupa el espacio restante */
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -129,7 +123,6 @@
 
 /* buttons */
 .project-actions {
-  /* clave: empuja los botones al fondo */
   margin-top: auto;
 
   padding-top: 1.6rem;

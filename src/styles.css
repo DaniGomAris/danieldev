@@ -5,43 +5,41 @@
   box-sizing: border-box;
 }
 
-/* header height variable */
+/* root variables */
 :root {
   --header-height: 80px;
 }
 
-/* scroll */
+/* scroll behavior */
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-/* base */
+/* base styles */
 html,
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: #ffffff;
   color: #111827;
-
   overflow-x: hidden;
 }
 
-/* safe area for fixed header */
+/* fixed header offset */
 main {
   padding-top: calc(var(--header-height) + env(safe-area-inset-top));
 }
 
-/* avoid header overlap when scrolling to anchors */
+/* anchor offset */
 section {
   scroll-margin-top: calc(var(--header-height) + env(safe-area-inset-top));
 }
 
-/* mobile */
+/* responsive */
 @media (max-width: 768px) {
   :root {
     --header-height: 80px;

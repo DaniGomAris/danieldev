@@ -1,5 +1,6 @@
 import { AfterViewInit, Component } from '@angular/core';
 
+/* types */
 interface Project {
   title: string;
   description: string;
@@ -19,10 +20,11 @@ interface Project {
 })
 export class Projects implements AfterViewInit {
 
+  /* projects data */
   projects: Project[] = [
     {
       title: 'La Morada Back',
-      description: 'Backend de la aplicación La Morada. Utilizando MongoDB como base de datos, uso de JWT para control de acceso, envío de notificaciones por correo e implementacion de sistemas de caché en la nube para control de sesiones.',
+      description: 'Backend de la aplicación La Morada...',
       image: 'lamorada-back.png',
       github: 'https://github.com/DaniGomAris/la-morada-back',
       tech: ' ',
@@ -30,7 +32,7 @@ export class Projects implements AfterViewInit {
     },
     {
       title: 'Quoridor',
-      description: 'Juego de tablero Quoridor. El juego consiste en mover tu peón desde un lado del tablero hasta el otro, mientras colocas muros para bloquear a tu oponente, el primer jugador en llegar al lado opuesto gana. Se implementa con Listas enlazadas y se utiliza el algoritmo de búsqueda A* para encontrar la mejor jugada.',
+      description: 'Juego de tablero Quoridor...',
       image: 'quoridor.png',
       github: 'https://github.com/DaniGomAris/Quoridor',
       tech: ' ',
@@ -38,7 +40,7 @@ export class Projects implements AfterViewInit {
     },
     {
       title: 'Axis Back',
-      description: 'Backend de la aplicaicon movil axis, Utilizando MongoDB como base de datos, uso de JWT para control de acceso, envío de notificaciones por correo e implementacion de sistemas de caché en la nube para la generacion de QR y control de sesiones.',
+      description: 'Backend de la aplicaicon movil axis...',
       image: 'axis-back.png',
       github: 'https://github.com/DaniGomAris/axis-authenticator-back',
       tech: ' ',
@@ -46,7 +48,7 @@ export class Projects implements AfterViewInit {
     },
     {
       title: 'Emergency Attention Center',
-      description: 'Sistema de atención de emergencias. Se implementa con colas de prioridad para gestionar las solicitudes de emergencia, asegurando que las más críticas se atiendan primero.',
+      description: 'Sistema de atención de emergencias...',
       image: 'emergency-attention-center.png',
       github: 'https://github.com/DaniGomAris/Emergency_attencion_center',
       tech: ' ',
@@ -54,7 +56,7 @@ export class Projects implements AfterViewInit {
     },
     {
       title: 'Axis authenticator',
-      description: 'Aplicación de autenticación para dispositivos móviles. Para generacion de códigos QR para control de acceso a edificios.',
+      description: 'Aplicación de autenticación...',
       image: 'axis.png',
       github: 'https://github.com/DaniGomAris/axis-authenticator',
       tech: ' ',
@@ -62,7 +64,7 @@ export class Projects implements AfterViewInit {
     },
     {
       title: 'La Morada',
-      description: 'Aplicación web para la gestión de una clínica de psicologos. Permite a los usuarios reservar citas, a los psicologos gestionar su agenda y a los administradores controlar el funcionamiento de la clínica. (backend desplegado pero vencido)',
+      description: 'Aplicación web para la gestión...',
       image: 'lamorada.png',
       web: 'https://lamorada-clinica.vercel.app/',
       tech: ' ',
@@ -70,7 +72,10 @@ export class Projects implements AfterViewInit {
     },
   ];
 
+  /* lifecycle */
   ngAfterViewInit(): void {
+
+    /* reveal elements */
     const elements = Array.from(
       document.querySelectorAll('#projects .reveal') as NodeListOf<HTMLElement>
     );
@@ -79,16 +84,16 @@ export class Projects implements AfterViewInit {
       document.querySelectorAll('#projects .project-card.reveal') as NodeListOf<HTMLElement>
     );
 
-    // stagger
+    /* stagger setup */
     cards.forEach((card, i) => {
       card.style.setProperty('--reveal-delay', `${i * 90}ms`);
     });
 
+    /* intersection observer */
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const el = entry.target as HTMLElement;
-
           if (entry.isIntersecting) {
             el.classList.add('is-visible');
             observer.unobserve(el);

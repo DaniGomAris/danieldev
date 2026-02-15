@@ -9,10 +9,13 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 })
 export class Header {
 
+  /* view reference */
   @ViewChild('headerRoot') headerRoot!: ElementRef;
 
+  /* state */
   menuOpen = false;
 
+  /* menu actions */
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
@@ -21,6 +24,7 @@ export class Header {
     this.menuOpen = false;
   }
 
+  /* navigation */
   navigateTo(sectionId: string) {
     const el = document.getElementById(sectionId);
     if (!el) return;
@@ -33,11 +37,14 @@ export class Header {
     this.closeMenu();
   }
 
+  /* click outside listener */
   @HostListener('document:click', ['$event'])
   onClickOutside(event: MouseEvent) {
     if (!this.menuOpen) return;
 
-    const clickedInside = this.headerRoot.nativeElement.contains(event.target);
+    const clickedInside =
+      this.headerRoot.nativeElement.contains(event.target);
+
     if (!clickedInside) {
       this.menuOpen = false;
     }

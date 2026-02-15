@@ -1,0 +1,299 @@
+/* main section */
+.contact {
+  padding: 6rem 0;
+  width: 100%;
+  color: #111827;
+}
+
+/* layout */
+.contact-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* text styles */
+.contact-text h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+}
+
+.contact-text p {
+  margin-top: 1.2rem;
+  max-width: 640px;
+  line-height: 1.85;
+  color: #4b5563;
+  font-size: 1.05rem;
+}
+
+/* reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  filter: blur(6px);
+  transition: opacity 750ms ease, transform 750ms ease, filter 750ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* orbit container */
+.contact-orbit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* orbit ring */
+.orbit-ring {
+  --ring-size: 380px;
+  --orbit-radius: 190px;
+
+  position: relative;
+  width: var(--ring-size);
+  height: var(--ring-size);
+  border-radius: 50%;
+  border: 2px dashed rgba(173, 175, 177, 0.28);
+
+  display: grid;
+  place-items: center;
+}
+
+/* orbit center */
+.orbit-center {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+
+  display: grid;
+  place-items: center;
+}
+
+.orbit-center img {
+  width: 56px;
+  height: 56px;
+  opacity: 0.75;
+}
+
+/* orbit rotation */
+.orbit-rotator {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  animation: orbitSpin 18s linear infinite;
+}
+
+@keyframes orbitSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* orbit items */
+.orbit-item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+
+  display: grid;
+  place-items: center;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--a))
+    translateX(var(--orbit-radius))
+    rotate(calc(var(--a) * -1));
+
+  transition: box-shadow 220ms ease;
+}
+
+.orbit-item:hover {
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+}
+
+.orbit-item img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  animation: orbitIconSpin 60s linear infinite;
+}
+
+@keyframes orbitIconSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* contact links */
+.contact-links {
+  max-width: 1400px;
+  margin: 8rem auto 0;
+  padding: 0 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.link-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.1rem 1rem;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.10);
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.link-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.14);
+}
+
+.link-card img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.link-card span {
+  font-weight: 800;
+  color: #6b7280;
+}
+
+/* orbit scroll animation */
+.contact .orbit-item {
+  opacity: 0;
+  filter: blur(8px);
+}
+
+.contact.in-view .orbit-item {
+  opacity: 1;
+  filter: blur(0);
+  transition: opacity 420ms ease, filter 700ms ease;
+  animation: orbitItemIn 720ms cubic-bezier(.2,1.2,.2,1) 1;
+  animation-fill-mode: both;
+}
+
+@keyframes orbitItemIn {
+  0% {
+    transform:
+      translate(-50%, -50%)
+      rotate(var(--a))
+      translateX(calc(var(--orbit-radius) * 0.75))
+      rotate(calc(var(--a) * -1))
+      scale(0.75);
+  }
+  65% {
+    transform:
+      translate(-50%, -50%)
+      rotate(var(--a))
+      translateX(calc(var(--orbit-radius) * 1.08))
+      rotate(calc(var(--a) * -1))
+      scale(1.05);
+  }
+  100% {
+    transform:
+      translate(-50%, -50%)
+      rotate(var(--a))
+      translateX(var(--orbit-radius))
+      rotate(calc(var(--a) * -1))
+      scale(1);
+  }
+}
+
+/* orbit stagger */
+.contact.in-view .orbit-item:nth-child(1) { animation-delay: 120ms; }
+.contact.in-view .orbit-item:nth-child(2) { animation-delay: 210ms; }
+.contact.in-view .orbit-item:nth-child(3) { animation-delay: 300ms; }
+.contact.in-view .orbit-item:nth-child(4) { animation-delay: 390ms; }
+.contact.in-view .orbit-item:nth-child(5) { animation-delay: 480ms; }
+.contact.in-view .orbit-item:nth-child(6) { animation-delay: 570ms; }
+.contact.in-view .orbit-item:nth-child(7) { animation-delay: 660ms; }
+
+/* responsive */
+@media (max-width: 1100px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .contact-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 4rem 0;
+  }
+
+  .contact-content,
+  .contact-links {
+    padding: 0 1rem;
+  }
+
+  .orbit-ring {
+    --ring-size: 300px;
+    --orbit-radius: 150px;
+  }
+
+  .contact-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .orbit-rotator {
+    animation: none;
+  }
+
+  .orbit-item img {
+    animation: none;
+  }
+
+  .reveal,
+  .reveal.is-visible {
+    transition: none;
+    transform: none;
+    filter: none;
+    opacity: 1;
+  }
+
+  .contact .orbit-item,
+  .contact.in-view .orbit-item {
+    animation: none !important;
+    opacity: 1;
+    filter: none;
+  }
+}

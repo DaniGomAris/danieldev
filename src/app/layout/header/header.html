@@ -1,4 +1,6 @@
 <header class="header" #headerRoot>
+
+  <!-- logo section -->
   <div class="logo-name-container">
     <div class="logo-square">
       <img src="logo.png" class="logo" />
@@ -6,6 +8,7 @@
     <span class="name">Daniel Gómez</span>
   </div>
 
+  <!-- navigation -->
   <nav
     class="nav-links"
     [class.open]="menuOpen"
@@ -18,6 +21,7 @@
     <a (click)="navigateTo('contact')">Contacto</a>
   </nav>
 
+  <!-- mobile burger button -->
   <button
     class="burger"
     (click)="toggleMenu(); $event.stopPropagation()"
@@ -26,4 +30,5 @@
     <span></span>
     <span></span>
   </button>
+
 </header>

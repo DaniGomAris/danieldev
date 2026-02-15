@@ -1,5 +1,6 @@
 import { AfterViewInit, Component } from '@angular/core';
 
+/* types */
 type Tech = { icon: string; name: string };
 
 @Component({
@@ -10,6 +11,8 @@ type Tech = { icon: string; name: string };
   styleUrl: './home.css',
 })
 export class Home implements AfterViewInit {
+
+  /* tech stack data */
   techs: Tech[] = [
     { icon: 'angular.png', name: 'Angular' },
     { icon: 'css.png', name: 'CSS' },
@@ -31,13 +34,17 @@ export class Home implements AfterViewInit {
     { icon: 'dart.png', name: 'Dart' },
   ];
 
+  /* lifecycle */
   ngAfterViewInit(): void {
+
     const scope = document.querySelector('#home');
     if (!scope) return;
 
-    const elements = Array.from(scope.querySelectorAll('.reveal')) as HTMLElement[];
+    /* reveal animation setup */
+    const elements = Array.from(
+      scope.querySelectorAll('.reveal')
+    ) as HTMLElement[];
 
-    // stagger por orden (h1, h2, p, etc.)
     elements.forEach((el, i) => {
       el.style.setProperty('--reveal-delay', `${i * 90}ms`);
     });
@@ -46,6 +53,7 @@ export class Home implements AfterViewInit {
       (entries) => {
         entries.forEach((entry) => {
           const el = entry.target as HTMLElement;
+
           if (entry.isIntersecting) {
             el.classList.add('is-visible');
             observer.unobserve(el);
@@ -58,6 +66,7 @@ export class Home implements AfterViewInit {
     elements.forEach((el) => observer.observe(el));
   }
 
+  /* smooth scroll */
   scrollTo(sectionId: string) {
     const el = document.getElementById(sectionId);
     if (!el) return;

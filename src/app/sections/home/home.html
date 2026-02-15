@@ -1,13 +1,18 @@
 <section class="home" id="home">
 
+  <!-- main content -->
   <div class="home-content">
+
+    <!-- text section -->
     <div class="text reveal-group">
       <h1 class="reveal">
         ¡Hola!<br />
         Soy <span>Daniel Gómez</span>
       </h1>
 
-      <h2 class="reveal">Desarrollador Jr FullStack con experiencia en Python</h2>
+      <h2 class="reveal">
+        Desarrollador Jr FullStack con experiencia en Python
+      </h2>
 
       <p class="reveal">
         Cuento con conocimientos en Python y JavaScript para desarrollo backend,
@@ -19,22 +24,28 @@
         sistemas de caché en la nube como Redis.
       </p>
 
+      <!-- contact block -->
       <div class="contact reveal">
         <span>Contáctame 👇</span>
         <a href="mailto:dani.gom.dev@gmail.com">dani.gom.dev@gmail.com</a>
       </div>
 
+      <!-- action buttons -->
       <div class="buttons reveal">
         <button class="primary" (click)="scrollTo('about')">Más sobre mí</button>
         <button class="secondary" (click)="scrollTo('contact')">Contáctame 📱</button>
       </div>
     </div>
 
+    <!-- profile section -->
     <div class="profile reveal-group">
+
+      <!-- profile image -->
       <div class="image-wrapper reveal">
         <img src="profile.png" alt="Daniel Gómez" />
       </div>
 
+      <!-- stats -->
       <div class="stats reveal">
         <div class="stat">
           <span class="number">1+</span>
@@ -47,15 +58,19 @@
         </div>
       </div>
 
+      <!-- certification badge -->
       <div class="badge reveal">
         🏆 Certificado en Python
       </div>
+
     </div>
   </div>
 
+  <!-- tech stack section -->
   <div class="stack reveal">
     <div class="stack-track">
 
+      <!-- tech items -->
       @for (t of techs; track t.name) {
         <div class="stack-item">
           <img [src]="t.icon" [alt]="t.name" loading="lazy" />
@@ -63,6 +78,7 @@
         </div>
       }
 
+      <!-- duplicated items for infinite scroll -->
       @for (t of techs; track t.name + '-dup') {
         <div class="stack-item">
           <img [src]="t.icon" [alt]="t.name" loading="lazy" />

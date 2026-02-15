@@ -1,1 +1,67 @@
-<p>contact works!</p>
+<section
+  class="contact"
+  id="contact"
+  #contactSection
+  [class.in-view]="inView"
+>
+  <!-- main content -->
+  <div class="contact-content">
+
+    <!-- text section -->
+    <div class="contact-text reveal-group">
+      <h2 class="reveal">Contáctame</h2>
+
+      <p class="reveal">
+        ¿Interesado en trabajar conmigo? Estoy disponible para oportunidades laborales,
+        proyectos freelance o colaboraciones. ¡Escríbeme!
+      </p>
+
+      <p class="reveal">
+        Interesado en plasmar ideas en soluciones reales, trabajando con buenas prácticas, control de versiones y despliegues
+        en la nube.
+      </p>
+    </div>
+
+    <!-- orbit section -->
+    <div class="contact-orbit">
+      <div class="orbit-ring">
+
+        <!-- center avatar -->
+        <div class="orbit-center">
+          <img src="perfil.png" alt="Perfil" />
+        </div>
+
+        <!-- rotating icons -->
+        <div class="orbit-rotator">
+          @for (i of orbitIcons; track i.alt) {
+            <a
+              class="orbit-item"
+              [href]="i.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              [style.--a]="i.angle + 'deg'">
+              <img [src]="i.icon" [alt]="i.alt" />
+            </a>
+          }
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- contact links section -->
+  <div class="contact-links reveal-group">
+    @for (l of links; track l.label) {
+      <a
+        class="link-card reveal"
+        [href]="l.href"
+        target="_blank"
+        rel="noopener noreferrer">
+        <img [src]="l.icon" [alt]="l.label" />
+        <span>{{ l.label }}</span>
+      </a>
+    }
+  </div>
+
+</section>
