@@ -4,6 +4,30 @@
   padding: 6rem 0;
   background: #0f1115;
   color: #e5e7eb;
+  position: relative;
+  overflow: hidden;
+}
+
+/* background */
+.certifications::before {
+  content: '';
+  position: absolute;
+  inset: -30%;
+  background:
+
+    radial-gradient(circle at 80% 35%, rgba(255, 172, 17, 0.1), transparent 55%),
+    radial-gradient(circle at 50% 90%, rgba(47, 130, 255, 0.1), transparent 60%);
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 900ms ease, transform 900ms ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* fade in glow when section enters */
+.certifications.in-view::before {
+  opacity: 1;
+  transform: scale(1);
 }
 
 /* header */
@@ -11,6 +35,8 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .certifications-header h2 {
@@ -24,11 +50,13 @@
 /* grid */
 .certifications-grid {
   max-width: 1500px;
-  margin: 3rem auto 0;
+  margin: 8rem auto 0;
   padding: 0 2rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 /* card wrapper */

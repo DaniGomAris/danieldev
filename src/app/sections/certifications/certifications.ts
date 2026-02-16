@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 /* certificate type */
@@ -18,7 +18,13 @@ type Certificate = {
   templateUrl: './certifications.html',
   styleUrl: './certifications.css',
 })
-export class Certifications implements AfterViewInit {
+export class Certifications implements AfterViewInit, OnDestroy {
+
+  @ViewChild('certSection', { static: true })
+  certSection!: ElementRef<HTMLElement>;
+
+  inView = false;
+  private io?: IntersectionObserver;
 
   /* certificates data */
   certificates: Certificate[] = [
@@ -33,28 +39,40 @@ export class Certifications implements AfterViewInit {
 
   /* lifecycle */
   ngAfterViewInit(): void {
-    const scope = document.querySelector('#certifications');
-    if (!scope) return;
+    const scope = this.certSection.nativeElement;
 
     const elements = Array.from(scope.querySelectorAll('.reveal')) as HTMLElement[];
+    elements.forEach((el, i) => el.style.setProperty('--reveal-delay', `${i * 90}ms`));
 
-    elements.forEach((el, i) => {
-      el.style.setProperty('--reveal-delay', `${i * 90}ms`);
-    });
-
-    const observer = new IntersectionObserver(
+    const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const el = entry.target as HTMLElement;
           if (entry.isIntersecting) {
             el.classList.add('is-visible');
-            observer.unobserve(el);
+            revealObserver.unobserve(el);
           }
         });
       },
       { threshold: 0.12, rootMargin: '0px 0px -10% 0px' }
     );
 
-    elements.forEach((el) => observer.observe(el));
+    elements.forEach((el) => revealObserver.observe(el));
+
+    this.io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          this.inView = true;
+          this.io?.disconnect();
+        }
+      },
+      { threshold: 0.18, rootMargin: '0px 0px -12% 0px' }
+    );
+
+    this.io.observe(scope);
+  }
+
+  ngOnDestroy(): void {
+    this.io?.disconnect();
   }
 }
