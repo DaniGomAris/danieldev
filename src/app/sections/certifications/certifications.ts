@@ -1,11 +1,60 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
+/* certificate type */
+type Certificate = {
+  tag: string;
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+};
+
+/* component */
 @Component({
   selector: 'app-certifications',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './certifications.html',
   styleUrl: './certifications.css',
 })
-export class Certifications {
+export class Certifications implements AfterViewInit {
 
+  /* certificates data */
+  certificates: Certificate[] = [
+    {
+      tag: 'backend',
+      title: 'Python',
+      description: 'Curso básico de desarrollo en Python',
+      image: 'python_logo.png',
+      link: 'https://drive.google.com/file/d/1DjsFbKUtEDzJ2uJT17fMYu6aVeSJpxWi/view?usp=sharing'
+    }
+  ];
+
+  /* lifecycle */
+  ngAfterViewInit(): void {
+    const scope = document.querySelector('#certifications');
+    if (!scope) return;
+
+    const elements = Array.from(scope.querySelectorAll('.reveal')) as HTMLElement[];
+
+    elements.forEach((el, i) => {
+      el.style.setProperty('--reveal-delay', `${i * 90}ms`);
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const el = entry.target as HTMLElement;
+          if (entry.isIntersecting) {
+            el.classList.add('is-visible');
+            observer.unobserve(el);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -10% 0px' }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+  }
 }

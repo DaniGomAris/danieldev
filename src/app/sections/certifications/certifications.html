@@ -1,1 +1,56 @@
-<p>certifications works!</p>
+<section class="certifications" id="certifications">
+
+  <!-- section header -->
+  <div class="certifications-header reveal-group">
+    <h2 class="reveal">Mis certificados</h2>
+  </div>
+
+  <!-- certificates grid -->
+  <div class="certifications-grid reveal-group">
+    @for (c of certificates; track c.title) {
+      <!-- certificate card -->
+      <a
+        class="cert-card reveal"
+        [href]="c.link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <!-- card inner layout -->
+        <div class="cert-card-inner">
+
+          <!-- certificate image -->
+          <div class="cert-icon-wrap">
+            <img
+              class="cert-icon"
+              [src]="c.image"
+              [alt]="c.title"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- certificate content -->
+          <div class="cert-content">
+
+            <!-- tag pill -->
+            <div class="cert-pill" [ngClass]="'pill-' + c.tag">
+              {{ c.tag }}
+            </div>
+
+            <!-- certificate title -->
+            <div class="cert-title">
+              {{ c.title }}
+            </div>
+
+            <!-- certificate description -->
+            <div class="cert-desc">
+              {{ c.description }}
+            </div>
+
+          </div>
+
+        </div>
+      </a>
+    }
+  </div>
+
+</section>

@@ -53,11 +53,11 @@ export class Contact implements AfterViewInit, OnDestroy {
   links: ContactLink[] = [
     { label: 'WhatsApp', icon: 'whatsapp.png', href: 'https://wa.me/+573024596983' },
     { label: 'Facebook', icon: 'facebook.png', href: 'https://facebook.com/Daniel.Gomezarisitizabal' },
+    { label: 'Instagram', icon: 'instagram.png', href: 'https://instagram.com/danielgomezsss' },
     { label: 'Gmail', icon: 'gmail.png', href: 'mailto:dani.gom.dev@gmail.com' },
+    { label: 'Telegram', icon: 'telegram.png', href: 'https://t.me/DaniGomAris' },
     { label: 'GitHub', icon: 'github.png', href: 'https://github.com/danigomaris' },
     { label: 'LinkedIn', icon: 'linkedin.png', href: 'https://www.linkedin.com/in/daniel-gomez-a7b6872b5' },
-    { label: 'Telegram', icon: 'telegram.png', href: 'https://t.me/DaniGomAris' },
-    { label: 'Instagram', icon: 'instagram.png', href: 'https://instagram.com/danielgomezsss' },
   ];
 
   /* lifecycle - after view init */
