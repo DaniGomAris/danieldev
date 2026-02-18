@@ -14,9 +14,10 @@
   position: absolute;
   inset: -30%;
   background:
-
-    radial-gradient(circle at 80% 35%, rgba(255, 172, 17, 0.1), transparent 55%),
-    radial-gradient(circle at 50% 90%, rgba(47, 130, 255, 0.1), transparent 60%);
+    radial-gradient(circle at 20% 30%, rgba(14, 139, 255, 0.15), transparent 55%),
+    radial-gradient(circle at 80% 40%, rgba(14, 34, 36, 0.15), transparent 55%),
+    radial-gradient(circle at 60% 90%, rgba(9, 25, 34, 0.15), transparent 60%),
+    #0c0905;
   opacity: 0;
   transform: scale(0.98);
   transition: opacity 900ms ease, transform 900ms ease;
