@@ -69,7 +69,7 @@
 /* image wrapper */
 .image-wrapper {
   position: relative;
-  width: 390px;
+  width: 400px;
   aspect-ratio: 1/1;
   border-radius: 50%;
   display: flex;
@@ -110,8 +110,8 @@
 
 /* profile image */
 .image-wrapper img {
-  width:90%;
-  height:90%;
+  width:97%;
+  height:97%;
   border-radius:50%;
   object-fit:cover;
 }
