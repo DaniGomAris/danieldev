@@ -33,12 +33,17 @@
   "BTN_WEB": "Web",
 
   "ITEMS": {
-    "LA_MORADA_BACK_DESC": "Backend de la aplicación La Morada...",
-    "QUORIDOR_DESC": "Juego de tablero Quoridor...",
-    "AXIS_BACK_DESC": "Backend de la aplicación móvil Axis...",
-    "EAC_DESC": "Sistema de atención de emergencias...",
-    "AXIS_AUTH_DESC": "Aplicación de autenticación...",
-    "LA_MORADA_DESC": "Aplicación web para la gestión..."
+    "LA_MORADA_BACK_DESC": "Backend desarrollado para la plataforma web de la Clínica La Morada. Proporciona una API RESTful para la gestión de pacientes, citas médicas, autenticación de usuarios y administración de información clínica. Implementa validaciones, manejo de roles y conexión segura con base de datos. Node.js v18.x",
+
+    "QUORIDOR_DESC": "Implementación del juego de mesa Quoridor desarrollada en Python. El proyecto incluye la lógica completa del juego, validación de movimientos, reglas oficiales y sistema de turnos. Diseñado con enfoque en estructuras de datos y algoritmos para la gestión eficiente del tablero. Python 3.10",
+
+    "AXIS_BACK_DESC": "Backend del sistema Axis Authenticator. Proporciona servicios de autenticación y autorización, generación y validación de tokens, y gestión de usuarios. Diseñado bajo arquitectura modular para facilitar escalabilidad y mantenimiento. Node.js v18.x",
+
+    "EAC_DESC": "Sistema desarrollado en Python para la gestión de un centro de atención de emergencias. Permite registrar pacientes, clasificar niveles de prioridad (triaje), administrar tiempos de atención y organizar recursos médicos. Enfocado en la simulación y optimización de procesos hospitalarios. Python 3.9",
+
+    "AXIS_AUTH_DESC": "Aplicación móvil desarrollada como cliente del sistema Axis Authenticator. Permite autenticación segura de usuarios, verificación en dos pasos y administración de credenciales. Diseñada con enfoque en seguridad y experiencia de usuario. Dart 3.x / Flutter 3.x",
+    
+    "LA_MORADA_DESC": "Aplicación web desarrollada para la Clínica La Morada. Permite a los usuarios consultar servicios médicos, agendar citas y acceder a información institucional. Implementa una arquitectura frontend moderna con consumo de API y diseño responsive. Angular 16"
     }
   },
   "ABOUT": {

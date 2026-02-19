@@ -33,12 +33,17 @@
   "BTN_WEB": "Live",
 
   "ITEMS": {
-    "LA_MORADA_BACK_DESC": "Backend for the La Morada app...",
-    "QUORIDOR_DESC": "Quoridor board game...",
-    "AXIS_BACK_DESC": "Backend for the Axis mobile app...",
-    "EAC_DESC": "Emergency attention system...",
-    "AXIS_AUTH_DESC": "Authentication app...",
-    "LA_MORADA_DESC": "Web app for management..."
+    "LA_MORADA_BACK_DESC": "Backend developed for the Clínica La Morada web platform. It provides a RESTful API for managing patients, medical appointments, user authentication, and clinical data administration. Includes data validation, role-based access control, and secure database integration. Node.js v18.x",
+
+    "QUORIDOR_DESC": "Implementation of the board game Quoridor developed in Python. The project includes full game logic, move validation, official rules enforcement, and turn management. Designed with a strong focus on data structures and algorithms for efficient board handling. Python 3.10",
+
+    "AXIS_BACK_DESC": "Backend for the Axis Authenticator system. Provides authentication and authorization services, token generation and validation, and user management features. Designed with a modular architecture to ensure scalability and maintainability. Node.js v18.x",
+
+    "EAC_DESC": "System developed in Python for managing an emergency attention center. It allows patient registration, priority classification (triage), management of service times, and organization of medical resources. Focused on simulation and optimization of hospital processes. Python 3.9",
+
+    "AXIS_AUTH_DESC": "Mobile application developed as the client for the Axis Authenticator system. Enables secure user authentication, two-factor verification, and credential management. Designed with a strong focus on security and user experience. Dart 3.x / Flutter 3.x",
+
+    "LA_MORADA_DESC": "Web application developed for Clínica La Morada. Allows users to browse medical services, schedule appointments, and access institutional information. Implements a modern frontend architecture with API integration and responsive design. Angular 16"
     }
   },
   "ABOUT": {
