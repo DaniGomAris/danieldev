@@ -131,6 +131,11 @@
     pointer-events: auto;
     transform: translateY(0);
   }
+
+  .lang{
+    margin-left: auto;   
+    margin-right: 0.6rem; 
+  }
 }
 
 /* Logo animation */
@@ -138,4 +143,70 @@
   0% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-5px) scale(1.03); }
   100% { transform: translateY(0) scale(1); }
+}
+
+/* Lenguage buttom */
+.lang{
+  display:flex;
+  align-items:center;
+}
+
+/* switch base */
+.lang-switch{
+  --w: 50px;
+  --h: 25px;
+  --pad: 0px;
+
+  width: var(--w);
+  height: var(--h);
+  border-radius: 999px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+
+  /* default español */
+  background: url("/es.png");
+  background-size: cover;
+  background-position: center;
+
+  transition: transform 220ms ease, box-shadow 220ms ease, background 260ms ease;
+}
+
+.lang-switch:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+}
+
+/* when EN active */
+.lang-switch.en{
+  background: url("/us.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* thumb */
+.lang-thumb{
+  position: absolute;
+  top: var(--pad);
+  left: var(--pad);
+
+  width: calc(var(--h) - (var(--pad) * 2));
+  height: calc(var(--h) - (var(--pad) * 2));
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  border: 10px solid rgba(255, 255, 255, 0.445);
+
+  transition: transform 260ms cubic-bezier(.2,1.1,.2,1);
+}
+
+/* move thumb right when EN */
+.lang-switch.en .lang-thumb{
+  transform: translateX(calc(var(--w) - var(--h)));
 }

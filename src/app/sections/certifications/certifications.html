@@ -3,12 +3,12 @@
 
   <!-- section header -->
   <div class="certifications-header reveal-group">
-    <h2 class="reveal">Mis certificados 🎓</h2>
+    <h2 class="reveal">{{ 'CERTIFICATIONS.TITLE' | translate }}</h2>
   </div>
 
   <!-- certificates grid -->
   <div class="certifications-grid reveal-group">
-    @for (c of certificates; track c.title) {
+    @for (c of certificates; track c.titleKey) {
       <!-- certificate card -->
       <a
         class="cert-card reveal"
@@ -24,7 +24,7 @@
             <img
               class="cert-icon"
               [src]="c.image"
-              [alt]="c.title"
+              [alt]="(c.titleKey | translate)"
               loading="lazy"
             />
           </div>
@@ -34,17 +34,17 @@
 
             <!-- tag pill -->
             <div class="cert-pill" [ngClass]="'pill-' + c.tag">
-              {{ c.tag }}
+              {{ c.tagKey | translate }}
             </div>
 
             <!-- certificate title -->
             <div class="cert-title">
-              {{ c.title }}
+              {{ c.titleKey | translate }}
             </div>
 
             <!-- certificate description -->
             <div class="cert-desc">
-              {{ c.description }}
+              {{ c.descriptionKey | translate }}
             </div>
 
           </div>

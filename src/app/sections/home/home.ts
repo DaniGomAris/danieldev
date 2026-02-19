@@ -1,4 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 /* types */
 type Tech = { icon: string; name: string };
@@ -6,7 +7,7 @@ type Tech = { icon: string; name: string };
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

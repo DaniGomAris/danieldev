@@ -9,16 +9,14 @@
 
     <!-- text section -->
     <div class="contact-text reveal-group">
-      <h2 class="reveal">Contáctame</h2>
+      <h2 class="reveal">{{ 'CONTACT.TITLE' | translate }}</h2>
 
       <p class="reveal">
-        ¿Interesado en trabajar conmigo? Estoy disponible para oportunidades laborales,
-        proyectos freelance o colaboraciones. ¡Escríbeme!
+        {{ 'CONTACT.P1' | translate }}
       </p>
 
       <p class="reveal">
-        Interesado en plasmar ideas en soluciones reales, trabajando con buenas prácticas, control de versiones y despliegues
-        en la nube.
+        {{ 'CONTACT.P2' | translate }}
       </p>
     </div>
 
@@ -28,7 +26,7 @@
 
         <!-- center avatar -->
         <div class="orbit-center">
-          <img src="perfil.png" alt="Perfil" />
+          <img src="perfil.png" [alt]="'CONTACT.CENTER_ALT' | translate" />
         </div>
 
         <!-- rotating icons -->

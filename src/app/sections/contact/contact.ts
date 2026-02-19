@@ -5,6 +5,7 @@ import {
   ViewChild,
   OnDestroy
 } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 /* types */
 
@@ -24,7 +25,7 @@ type ContactLink = {
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })

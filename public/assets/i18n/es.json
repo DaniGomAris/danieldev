@@ -1,0 +1,85 @@
+{
+  "NAV": {
+    "HOME": "Inicio",
+    "PROJECTS": "Proyectos",
+    "ABOUT": "Sobre mí",
+    "BLOG": "Blog",
+    "CONTACT": "Contacto",
+    "CERTIFICATIONS": "Certificaciones"
+  },
+  "LANG": {
+    "ES": "ES",
+    "EN": "EN"
+  },
+  "HOME": {
+    "HELLO": "¡Hola!",
+    "I_AM": "Soy",
+    "ROLE": "Desarrollador Jr FullStack con experiencia en Python",
+    "DESCRIPTION_1": "Cuento con conocimientos en Python y JavaScript para desarrollo backend, así como en Angular y Node.js para frontend. Trabajo con bases de datos relacionales como MySQL y no relacionales como MongoDB y Firebase. Tengo experiencia en despliegue de aplicaciones utilizando Railway, Vercel y Render.",
+    "DESCRIPTION_2": "Además, tengo experiencia utilizando Docker, Git y GitHub, y manejo sistemas de caché en la nube como Redis.",
+    "CONTACT_ME": "Contáctame 👇",
+    "BTN_MORE_ABOUT": "Más sobre mí",
+    "BTN_CONTACT": "Contáctame 📱",
+    "STAT_EXP": "Año de experiencia",
+    "STAT_PROJECTS": "Proyectos",
+    "STAT_FULLSTACK": "FullStack",
+    "BADGE": "🏆 Certificado en Python"
+  },
+
+  "PROJECTS": {
+  "TITLE": "Mis proyectos 🔥",
+  "SUBTITLE": "Algunos proyectos que he construido, universitarios y propios.",
+  "BTN_GITHUB": "GitHub",
+  "BTN_WEB": "Web",
+
+  "ITEMS": {
+    "LA_MORADA_BACK_DESC": "Backend de la aplicación La Morada...",
+    "QUORIDOR_DESC": "Juego de tablero Quoridor...",
+    "AXIS_BACK_DESC": "Backend de la aplicación móvil Axis...",
+    "EAC_DESC": "Sistema de atención de emergencias...",
+    "AXIS_AUTH_DESC": "Aplicación de autenticación...",
+    "LA_MORADA_DESC": "Aplicación web para la gestión..."
+    }
+  },
+  "ABOUT": {
+  "TITLE": "Sobre Mí ⚙️",
+  "P1": "Soy un estudiante y desarrollador Jr FullStack con mas de 1 año de experiencia enfocado en backend. Me gusta trabajar tanto en frontend como en backend, y siempre estoy aprendiendo para mejorar mis habilidades y crear aplicaciones rapidas y eficientes.",
+  "P2": "Interesado en plasmar ideas en soluciones reales, trabajando con buenas prácticas, control de versiones y despliegues en la nube. Me interesa desarrollar los proyectos con código escalable y mantenible.",
+  "ROLE_SMALL": "Full Stack Jr",
+  "ROLE_STRONG": "Desarrollador",
+  "CARDS": {
+    "FRONT": "Dev Front-end",
+    "BACK": "Dev Back-end",
+    "FULL": "Dev FullStack"
+    }
+  },
+  "BLOG": {
+  "TITLE_1": "Blog FullStack",
+  "TITLE_2": "Desarrollador 💡",
+  "DESC": "En mi blog comparto mi proceso de estudio y mi camino en el mundo tecnologico.",
+  "CARD_1": {
+    "TITLE": "Universidad 2026",
+    "BODY": "Actualmente voy en octavo semestre en la Universidad de Medellín y pronto entraré en prácticas empresariales. Continúo formándome como ingeniero en sistemas."
+    }
+  },
+  "CONTACT": {
+  "TITLE": "Contáctame",
+  "P1": "¿Interesado en trabajar conmigo? Estoy disponible para oportunidades laborales, proyectos freelance o colaboraciones. ¡Escríbeme!",
+  "P2": "Interesado en plasmar ideas en soluciones reales, trabajando con buenas prácticas, control de versiones y despliegues en la nube.",
+  "CENTER_ALT": "Perfil"
+  },
+  "CERTIFICATIONS": {
+  "TITLE": "Mis certificados 🎓",
+  "TAGS": {
+    "backend": "backend",
+    "cloud": "cloud",
+    "tools": "tools",
+    "systems": "systems",
+    "design": "design"
+  },
+  "ITEMS": {
+    "PYTHON_TITLE": "Python",
+    "PYTHON_DESC": "Curso básico de desarrollo en Python"
+    }
+  }
+}

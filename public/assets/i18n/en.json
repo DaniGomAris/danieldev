@@ -1,0 +1,85 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "PROJECTS": "Projects",
+    "ABOUT": "About me",
+    "BLOG": "Blog",
+    "CONTACT": "Contact",
+    "CERTIFICATIONS": "Certifications"
+  },
+  "LANG": {
+    "ES": "ES",
+    "EN": "EN"
+  },
+  "HOME": {
+    "HELLO": "Hi!",
+    "I_AM": "I'm",
+    "ROLE": "Junior FullStack Developer with Python experience",
+    "DESCRIPTION_1": "I have knowledge of Python and JavaScript for backend development, as well as Angular and Node.js for frontend. I work with relational databases like MySQL and non-relational ones like MongoDB and Firebase. I have experience deploying applications using Railway, Vercel, and Render.",
+    "DESCRIPTION_2": "Additionally, I have experience using Docker, Git, and GitHub, and I work with cloud caching systems like Redis.",
+    "CONTACT_ME": "Contact me 👇",
+    "BTN_MORE_ABOUT": "More about me",
+    "BTN_CONTACT": "Contact me 📱",
+    "STAT_EXP": "Year of experience",
+    "STAT_PROJECTS": "Projects",
+    "STAT_FULLSTACK": "FullStack",
+    "BADGE": "🏆 Python Certified"
+  },
+
+  "PROJECTS": {
+  "TITLE": "My projects 🔥",
+  "SUBTITLE": "Some projects I've built — for university and personal work.",
+  "BTN_GITHUB": "GitHub",
+  "BTN_WEB": "Live",
+
+  "ITEMS": {
+    "LA_MORADA_BACK_DESC": "Backend for the La Morada app...",
+    "QUORIDOR_DESC": "Quoridor board game...",
+    "AXIS_BACK_DESC": "Backend for the Axis mobile app...",
+    "EAC_DESC": "Emergency attention system...",
+    "AXIS_AUTH_DESC": "Authentication app...",
+    "LA_MORADA_DESC": "Web app for management..."
+    }
+  },
+  "ABOUT": {
+  "TITLE": "About Me ⚙️",
+  "P1": "I'm a student and Junior FullStack developer with over 1 year of experience focused on backend. I enjoy working on both frontend and backend, and I'm always learning to improve my skills and build fast and efficient applications.",
+  "P2": "I'm interested in turning ideas into real solutions, working with best practices, version control, and cloud deployments. I like building projects with scalable and maintainable code.",
+  "ROLE_SMALL": "Junior Full Stack",
+  "ROLE_STRONG": "Developer",
+  "CARDS": {
+    "FRONT": "Front-end Dev",
+    "BACK": "Back-end Dev",
+    "FULL": "FullStack Dev"
+    }
+  },
+  "BLOG": {
+  "TITLE_1": "FullStack Blog",
+  "TITLE_2": "Developer 💡",
+  "DESC": "On my blog I share my learning process and my journey in the tech world.",
+  "CARD_1": {
+    "TITLE": "University 2026",
+    "BODY": "I'm currently in my eighth semester at Universidad de Medellín and I'll soon start an internship. I'm continuing my training as a systems engineer."
+    }
+  },
+  "CONTACT": {
+  "TITLE": "Contact me",
+  "P1": "Interested in working with me? I'm available for job opportunities, freelance projects, or collaborations. Message me!",
+  "P2": "I'm interested in turning ideas into real solutions, working with best practices, version control, and cloud deployments.",
+  "CENTER_ALT": "Profile"
+  },
+  "CERTIFICATIONS": {
+  "TITLE": "My certifications 🎓",
+  "TAGS": {
+    "backend": "backend",
+    "cloud": "cloud",
+    "tools": "tools",
+    "systems": "systems",
+    "design": "design"
+  },
+  "ITEMS": {
+    "PYTHON_TITLE": "Python",
+    "PYTHON_DESC": "Basic Python development course"
+    }
+  }
+}

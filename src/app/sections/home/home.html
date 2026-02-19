@@ -6,34 +6,30 @@
     <!-- text section -->
     <div class="text reveal-group">
       <h1 class="reveal">
-        ¡Hola!<br />
-        Soy <span>Daniel Gómez</span>
+        {{ 'HOME.HELLO' | translate }}<br />
+        {{ 'HOME.I_AM' | translate }} <span>Daniel Gómez</span>
       </h1>
 
       <h2 class="reveal">
-        Desarrollador Jr FullStack con experiencia en Python
+        {{ 'HOME.ROLE' | translate }}
       </h2>
 
       <p class="reveal">
-        Cuento con conocimientos en Python y JavaScript para desarrollo backend,
-        así como en Angular y Node.js para frontend. Trabajo con bases de datos
-        relacionales como MySQL y no relacionales como MongoDB y Firebase.
-        Tengo experiencia en despliegue de aplicaciones utilizando Railway, Vercel y Render.
+        {{ 'HOME.DESCRIPTION_1' | translate }}
         <br /><br />
-        Además, tengo experiencia utilizando Docker, Git y GitHub, y manejo
-        sistemas de caché en la nube como Redis.
+        {{ 'HOME.DESCRIPTION_2' | translate }}
       </p>
 
       <!-- contact block -->
       <div class="contact reveal">
-        <span>Contáctame 👇</span>
+        <span>{{ 'HOME.CONTACT_ME' | translate }}</span>
         <a href="mailto:dani.gom.dev@gmail.com">dani.gom.dev@gmail.com</a>
       </div>
 
       <!-- action buttons -->
       <div class="buttons reveal">
-        <button class="primary" (click)="scrollTo('about')">Más sobre mí</button>
-        <button class="secondary" (click)="scrollTo('contact')">Contáctame 📱</button>
+        <button class="primary" (click)="scrollTo('about')">{{ 'HOME.BTN_MORE_ABOUT' | translate }}</button>
+        <button class="secondary" (click)="scrollTo('contact')">{{ 'HOME.BTN_CONTACT' | translate }}</button>
       </div>
     </div>
 
@@ -49,18 +45,21 @@
       <div class="stats reveal">
         <div class="stat">
           <span class="number">1+</span>
-          <span class="label">Año de experiencia<br /></span>
+          <span class="label">{{ 'HOME.STAT_EXP' | translate }}<br /></span>
         </div>
 
         <div class="stat">
           <span class="number">10+</span>
-          <span class="label">Proyectos<br />FullStack</span>
+          <span class="label">
+            {{ 'HOME.STAT_PROJECTS' | translate }}<br />
+            {{ 'HOME.STAT_FULLSTACK' | translate }}
+          </span>
         </div>
       </div>
 
       <!-- certification badge -->
       <div class="badge reveal">
-        🏆 Certificado en Python
+        {{ 'HOME.BADGE' | translate }}
       </div>
 
     </div>

@@ -1,6 +1,5 @@
 <header class="header" #headerRoot>
 
-  <!-- logo section -->
   <div class="logo-name-container">
     <div class="logo-square">
       <img src="logo.png" class="logo" />
@@ -9,27 +8,30 @@
   </div>
 
   <!-- navigation -->
-  <nav
-    class="nav-links"
-    [class.open]="menuOpen"
-    (click)="$event.stopPropagation()"
-  >
-    <a (click)="navigateTo('home')">Inicio</a>
-    <a (click)="navigateTo('projects')">Proyectos</a>
-    <a (click)="navigateTo('about')">Sobre mi</a>
-    <a (click)="navigateTo('blog')">Blog</a>
-    <a (click)="navigateTo('contact')">Contacto</a>
-    <a (click)="navigateTo('certifications')">Certificaciones</a>
+  <nav class="nav-links" [class.open]="menuOpen" (click)="$event.stopPropagation()">
+    <a (click)="navigateTo('home')">{{ 'NAV.HOME' | translate }}</a>
+    <a (click)="navigateTo('projects')">{{ 'NAV.PROJECTS' | translate }}</a>
+    <a (click)="navigateTo('about')">{{ 'NAV.ABOUT' | translate }}</a>
+    <a (click)="navigateTo('blog')">{{ 'NAV.BLOG' | translate }}</a>
+    <a (click)="navigateTo('contact')">{{ 'NAV.CONTACT' | translate }}</a>
+    <a (click)="navigateTo('certifications')">{{ 'NAV.CERTIFICATIONS' | translate }}</a>
   </nav>
 
-  <!-- mobile burger button -->
-  <button
-    class="burger"
-    (click)="toggleMenu(); $event.stopPropagation()"
-  >
-    <span></span>
-    <span></span>
-    <span></span>
+  <!-- language toggle -->
+  <div class="lang" (click)="$event.stopPropagation()">
+    <button
+      class="lang-switch"
+      type="button"
+      [class.en]="currentLang === 'en'"
+      (click)="setLang(currentLang === 'en' ? 'es' : 'en')"
+    >
+      <span class="lang-thumb"></span>
+    </button>
+  </div>
+
+  <button class="burger" (click)="toggleMenu(); $event.stopPropagation()">
+
+    <span></span><span></span><span></span>
   </button>
 
 </header>

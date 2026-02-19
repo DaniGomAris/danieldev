@@ -2,8 +2,8 @@
   <div class="projects-container reveal">
 
     <div class="projects-header reveal">
-      <h2>Mis proyectos 🔥</h2>
-      <p>Algunos proyectos que he construido, universitarios y propios.</p>
+      <h2>{{ 'PROJECTS.TITLE' | translate }}</h2>
+      <p>{{ 'PROJECTS.SUBTITLE' | translate }}</p>
     </div>
 
     <div class="projects-grid">
@@ -34,7 +34,7 @@
 
             <!-- description -->
             <p class="project-desc">
-              {{ p.description }}
+              {{ p.descriptionKey | translate }}
             </p>
 
             <!-- buttons -->
@@ -51,7 +51,7 @@
                   <img src="githubwhite.png"
                       alt="GitHub"
                       class="btn-icon" />
-                  GitHub
+                  {{ 'PROJECTS.BTN_GITHUB' | translate }}
                 </a>
               }
 
@@ -67,7 +67,7 @@
                   <img src="web.png"
                     alt="Web"
                     class="btn-icon" />
-                  Web
+                  {{ 'PROJECTS.BTN_WEB' | translate }}
                 </a>
               }
 

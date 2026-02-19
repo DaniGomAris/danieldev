@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './blog.html',
   styleUrl: './blog.css',
 })

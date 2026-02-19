@@ -1,11 +1,13 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 /* certificate type */
 type Certificate = {
   tag: string;
-  title: string;
-  description: string;
+  tagKey: string;
+  titleKey: string;
+  descriptionKey: string;
   image: string;
   link: string;
 };
@@ -14,7 +16,7 @@ type Certificate = {
 @Component({
   selector: 'app-certifications',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './certifications.html',
   styleUrl: './certifications.css',
 })
@@ -30,8 +32,9 @@ export class Certifications implements AfterViewInit, OnDestroy {
   certificates: Certificate[] = [
     {
       tag: 'backend',
-      title: 'Python',
-      description: 'Curso básico de desarrollo en Python',
+      tagKey: 'CERTIFICATIONS.TAGS.backend',
+      titleKey: 'CERTIFICATIONS.ITEMS.PYTHON_TITLE',
+      descriptionKey: 'CERTIFICATIONS.ITEMS.PYTHON_DESC',
       image: 'python_logo.png',
       link: 'https://drive.google.com/file/d/1DjsFbKUtEDzJ2uJT17fMYu6aVeSJpxWi/view?usp=sharing'
     }

@@ -1,9 +1,10 @@
 import { AfterViewInit, Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 /* types */
 interface Project {
   title: string;
-  description: string;
+  descriptionKey: string;
   image: string;
   github?: string;
   web?: string;
@@ -14,7 +15,7 @@ interface Project {
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './projects.html',
   styleUrl: './projects.css',
 })
@@ -24,7 +25,7 @@ export class Projects implements AfterViewInit {
   projects: Project[] = [
     {
       title: 'La Morada Back',
-      description: 'Backend de la aplicación La Morada...',
+      descriptionKey: 'PROJECTS.ITEMS.LA_MORADA_BACK_DESC',
       image: 'lamorada-back.png',
       github: 'https://github.com/DaniGomAris/la-morada-back',
       tech: ' ',
@@ -32,7 +33,7 @@ export class Projects implements AfterViewInit {
     },
     {
       title: 'Quoridor',
-      description: 'Juego de tablero Quoridor...',
+      descriptionKey: 'PROJECTS.ITEMS.QUORIDOR_DESC',
       image: 'quoridor.png',
       github: 'https://github.com/DaniGomAris/Quoridor',
       tech: ' ',
@@ -40,7 +41,7 @@ export class Projects implements AfterViewInit {
     },
     {
       title: 'Axis Back',
-      description: 'Backend de la aplicaicon movil axis...',
+      descriptionKey: 'PROJECTS.ITEMS.AXIS_BACK_DESC',
       image: 'axis-back.png',
       github: 'https://github.com/DaniGomAris/axis-authenticator-back',
       tech: ' ',
@@ -48,7 +49,7 @@ export class Projects implements AfterViewInit {
     },
     {
       title: 'Emergency Attention Center',
-      description: 'Sistema de atención de emergencias...',
+      descriptionKey: 'PROJECTS.ITEMS.EAC_DESC',
       image: 'emergency-attention-center.png',
       github: 'https://github.com/DaniGomAris/Emergency_attencion_center',
       tech: ' ',
@@ -56,7 +57,7 @@ export class Projects implements AfterViewInit {
     },
     {
       title: 'Axis authenticator',
-      description: 'Aplicación de autenticación...',
+      descriptionKey: 'PROJECTS.ITEMS.AXIS_AUTH_DESC',
       image: 'axis.png',
       github: 'https://github.com/DaniGomAris/axis-authenticator',
       tech: ' ',
@@ -64,7 +65,7 @@ export class Projects implements AfterViewInit {
     },
     {
       title: 'La Morada',
-      description: 'Aplicación web para la gestión...',
+      descriptionKey: 'PROJECTS.ITEMS.LA_MORADA_DESC',
       image: 'lamorada.png',
       web: 'https://lamorada-clinica.vercel.app/',
       tech: ' ',
