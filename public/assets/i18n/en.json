@@ -5,12 +5,15 @@
     "ABOUT": "About me",
     "BLOG": "Blog",
     "CONTACT": "Contact",
-    "CERTIFICATIONS": "Certifications"
+    "CERTIFICATIONS": "Certifications",
+    "CV": "Download CV"
   },
+
   "LANG": {
     "ES": "ES",
     "EN": "EN"
   },
+
   "HOME": {
     "HELLO": "Hi!",
     "I_AM": "I'm",
@@ -46,6 +49,7 @@
     "LA_MORADA_DESC": "Web application developed for Clínica La Morada. Allows users to browse medical services, schedule appointments, and access institutional information. Implements a modern frontend architecture with API integration and responsive design. Angular 16"
     }
   },
+
   "ABOUT": {
   "TITLE": "About Me ⚙️",
   "P1": "I'm a student and Junior FullStack developer with over 1 year of experience focused on backend. I enjoy working on both frontend and backend, and I'm always learning to improve my skills and build fast and efficient applications.",
@@ -58,6 +62,7 @@
     "FULL": "FullStack Dev"
     }
   },
+
   "BLOG": {
   "TITLE_1": "FullStack Blog",
   "TITLE_2": "Developer 💡",
@@ -67,12 +72,14 @@
     "BODY": "I'm currently in my eighth semester at Universidad de Medellín and I'll soon start an internship. I'm continuing my training as a systems engineer."
     }
   },
+
   "CONTACT": {
   "TITLE": "Contact me",
   "P1": "Interested in working with me? I'm available for job opportunities, freelance projects, or collaborations. Message me!",
   "P2": "I'm interested in turning ideas into real solutions, working with best practices, version control, and cloud deployments.",
   "CENTER_ALT": "Profile"
   },
+
   "CERTIFICATIONS": {
   "TITLE": "My certifications 🎓",
   "TAGS": {

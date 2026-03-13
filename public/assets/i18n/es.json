@@ -5,12 +5,15 @@
     "ABOUT": "Sobre mí",
     "BLOG": "Blog",
     "CONTACT": "Contacto",
-    "CERTIFICATIONS": "Certificaciones"
+    "CERTIFICATIONS": "Certificaciones",
+    "CV": "Descargar CV"
   },
+
   "LANG": {
     "ES": "ES",
     "EN": "EN"
   },
+
   "HOME": {
     "HELLO": "¡Hola!",
     "I_AM": "Soy",
@@ -46,6 +49,7 @@
     "LA_MORADA_DESC": "Aplicación web desarrollada para la Clínica La Morada. Permite a los usuarios consultar servicios médicos, agendar citas y acceder a información institucional. Implementa una arquitectura frontend moderna con consumo de API y diseño responsive. Angular 16"
     }
   },
+
   "ABOUT": {
   "TITLE": "Sobre Mí ⚙️",
   "P1": "Soy un estudiante y desarrollador Jr FullStack con mas de 1 año de experiencia enfocado en backend. Me gusta trabajar tanto en frontend como en backend, y siempre estoy aprendiendo para mejorar mis habilidades y crear aplicaciones rapidas y eficientes.",
@@ -58,6 +62,7 @@
     "FULL": "Dev FullStack"
     }
   },
+
   "BLOG": {
   "TITLE_1": "Blog FullStack",
   "TITLE_2": "Desarrollador 💡",
@@ -67,12 +72,14 @@
     "BODY": "Actualmente voy en octavo semestre en la Universidad de Medellín y pronto entraré en prácticas empresariales. Continúo formándome como ingeniero en sistemas."
     }
   },
+
   "CONTACT": {
   "TITLE": "Contáctame",
   "P1": "¿Interesado en trabajar conmigo? Estoy disponible para oportunidades laborales, proyectos freelance o colaboraciones. ¡Escríbeme!",
   "P2": "Interesado en plasmar ideas en soluciones reales, trabajando con buenas prácticas, control de versiones y despliegues en la nube.",
   "CENTER_ALT": "Perfil"
   },
+
   "CERTIFICATIONS": {
   "TITLE": "Mis certificados 🎓",
   "TAGS": {
@@ -82,6 +89,7 @@
     "systems": "systems",
     "design": "design"
   },
+
   "ITEMS": {
     "PYTHON_TITLE": "Python",
     "PYTHON_DESC": "Curso básico de desarrollo en Python"

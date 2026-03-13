@@ -17,6 +17,17 @@
     <a (click)="navigateTo('certifications')">{{ 'NAV.CERTIFICATIONS' | translate }}</a>
   </nav>
 
+  <!-- download CV -->
+  <a
+  class="cv-btn"
+  href="Daniel_Gomez_Aristizabal.pdf"
+  target="_blank"
+  rel="noopener"
+  (click)="$event.stopPropagation()"
+  >
+    {{ 'NAV.CV' | translate }}
+  </a>
+  
   <!-- language toggle -->
   <div class="lang" (click)="$event.stopPropagation()">
     <button
