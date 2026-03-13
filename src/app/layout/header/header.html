@@ -20,12 +20,12 @@
   <!-- download CV -->
   <a
   class="cv-btn"
-  href="Daniel_Gomez_Aristizabal.pdf"
+  [href]="cvUrl"
   target="_blank"
   rel="noopener"
   (click)="$event.stopPropagation()"
   >
-    {{ 'NAV.CV' | translate }}
+    {{ currentLang === 'en' ? 'Download CV' : 'Descargar CV' }}
   </a>
   
   <!-- language toggle -->

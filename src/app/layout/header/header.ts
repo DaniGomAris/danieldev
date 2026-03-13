@@ -18,6 +18,12 @@ export class Header {
     this.currentLang = (this.translate.currentLang || this.translate.defaultLang || 'es') as 'es' | 'en';
   }
 
+  get cvUrl(): string {
+    return this.currentLang === 'en'
+      ? 'Daniel_Gomez_Aristizabal_EN.pdf'
+      : 'Daniel_Gomez_Aristizabal_ES.pdf';
+  }
+
   setLang(lang: 'es' | 'en') {
     this.currentLang = lang;
     this.translate.use(lang);
