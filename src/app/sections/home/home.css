@@ -17,9 +17,10 @@
 
 /* text */
 .text h1 {
-  font-size: 3.2rem;
+  font-size: 10rem;
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1;
+  color: #f59300;
 }
 
 .text h1 span {
@@ -27,7 +28,7 @@
 }
 
 .text h2 {
-  margin-top: 1rem;
+  margin-top: -5rem;
   font-size: 1.3rem;
   font-weight: 600;
   color: #374151;
@@ -40,7 +41,7 @@
   color: #4b5563;
 }
 
-/* contact block */
+/*
 .contact {
   margin-top: 1.5rem;
 }
@@ -52,6 +53,7 @@
   text-decoration: none;
   margin-top: 0.25rem;
 }
+*/
 
 /* buttons */
 .buttons {
@@ -153,29 +155,6 @@ button:hover {
   width: 97%;
   height: 97%;
   border-radius: 50%;
-}
-
-/* stats */
-.stats {
-  position: absolute;
-  right: -80px;
-  top: 75px;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.stat {
-  padding: 1rem 3rem;
-}
-
-.stat .number {
-  font-size: 3rem;
-  font-weight: 800;
-}
-
-.stat .label {
-  font-size: 0.9rem;
 }
 
 /* badge */

@@ -15,22 +15,17 @@
   },
 
   "HOME": {
-    "HELLO": "¡Hola!",
-    "I_AM": "Soy",
-    "ROLE": "Desarrollador Jr FullStack con experiencia en Python",
-    "DESCRIPTION_1": "Cuento con conocimientos en Python y JavaScript para desarrollo backend, así como en Angular y Node.js para frontend. Trabajo con bases de datos relacionales como MySQL y no relacionales como MongoDB y Firebase. Tengo experiencia en despliegue de aplicaciones utilizando Railway, Vercel y Render.",
-    "DESCRIPTION_2": "Además, tengo experiencia utilizando Docker, Git y GitHub, y manejo sistemas de caché en la nube como Redis.",
-    "CONTACT_ME": "Contáctame 👇",
+    "NAME": "DANIEL",
+    "LAST_NAME": "GOMEZ",
+    "ROLE": "Desarrollador FullStack",
+    "DESCRIPTION_1": "Desarrollador Fullstack especializado en Python, con experiencia en Angular y Node.js. Bases de datos relacionales MySQL y no relacionales como MongoDB y Firebase. Experiencia en despliegue en Railway, Vercel y Render.",
     "BTN_MORE_ABOUT": "Más sobre mí",
-    "BTN_CONTACT": "Contáctame 📱",
-    "STAT_EXP": "Año de experiencia",
-    "STAT_PROJECTS": "Proyectos",
-    "STAT_FULLSTACK": "FullStack",
-    "BADGE": "🏆 Certificado en Python"
+    "BTN_CONTACT": "Contáctame",
+    "BADGE": "Python developer Coursera"
   },
 
   "PROJECTS": {
-  "TITLE": "Mis proyectos 🔥",
+  "TITLE": "Mis proyectos",
   "SUBTITLE": "Algunos proyectos que he construido, universitarios y propios.",
   "BTN_GITHUB": "GitHub",
   "BTN_WEB": "Web",
@@ -51,10 +46,10 @@
   },
 
   "ABOUT": {
-  "TITLE": "Sobre Mí ⚙️",
-  "P1": "Soy un estudiante y desarrollador Jr FullStack con mas de 1 año de experiencia enfocado en backend. Me gusta trabajar tanto en frontend como en backend, y siempre estoy aprendiendo para mejorar mis habilidades y crear aplicaciones rapidas y eficientes.",
+  "TITLE": "Sobre Mí",
+  "P1": "Soy un estudiante y desarrollador FullStack con mas de 1 año de experiencia enfocado en backend. Me gusta trabajar tanto en frontend como en backend, y siempre estoy aprendiendo para mejorar mis habilidades y crear aplicaciones rapidas y eficientes.",
   "P2": "Interesado en plasmar ideas en soluciones reales, trabajando con buenas prácticas, control de versiones y despliegues en la nube. Me interesa desarrollar los proyectos con código escalable y mantenible.",
-  "ROLE_SMALL": "Full Stack Jr",
+  "ROLE_SMALL": "Full Stack",
   "ROLE_STRONG": "Desarrollador",
   "CARDS": {
     "FRONT": "Dev Front-end",
@@ -65,7 +60,7 @@
 
   "BLOG": {
   "TITLE_1": "Blog FullStack",
-  "TITLE_2": "Desarrollador 💡",
+  "TITLE_2": "Desarrollador ",
   "DESC": "En mi blog comparto mi proceso de estudio y mi camino en el mundo tecnologico.",
   "CARD_1": {
     "TITLE": "Universidad 2026",
@@ -81,7 +76,7 @@
   },
 
   "CERTIFICATIONS": {
-  "TITLE": "Mis certificados 🎓",
+  "TITLE": "Mis certificados",
   "TAGS": {
     "backend": "backend",
     "cloud": "cloud",
