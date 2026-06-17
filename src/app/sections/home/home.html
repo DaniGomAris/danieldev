@@ -20,24 +20,26 @@
 
       <!-- action buttons -->
       <div class="buttons reveal">
-        <button class="primary" (click)="scrollTo('about')">{{ 'HOME.BTN_MORE_ABOUT' | translate }}</button>
-        <button class="secondary" (click)="scrollTo('contact')">{{ 'HOME.BTN_CONTACT' | translate }}</button>
+        <button class="primary" (click)="scrollTo('about')">
+          {{ 'HOME.BTN_MORE_ABOUT' | translate }}
+        </button>
+
+        <button class="secondary" (click)="scrollTo('contact')">
+          {{ 'HOME.BTN_CONTACT' | translate }}
+        </button>
       </div>
     </div>
 
     <!-- profile section -->
     <div class="profile reveal-group">
 
-      <!-- profile image -->
       <div class="image-wrapper reveal">
         <img src="yo.png" alt="Daniel Gómez" />
       </div>
 
-      <!-- certification badge -->
-      <div class="badge reveal">
+      <div class="badge">
         {{ 'HOME.BADGE' | translate }}
       </div>
-
     </div>
   </div>
 
@@ -45,7 +47,6 @@
   <div class="stack reveal">
     <div class="stack-track">
 
-      <!-- tech items -->
       @for (t of techs; track t.name) {
         <div class="stack-item">
           <img [src]="t.icon" [alt]="t.name" loading="lazy" />
@@ -53,7 +54,6 @@
         </div>
       }
 
-      <!-- duplicated items for infinite scroll -->
       @for (t of techs; track t.name + '-dup') {
         <div class="stack-item">
           <img [src]="t.icon" [alt]="t.name" loading="lazy" />
