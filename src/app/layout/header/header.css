@@ -155,6 +155,10 @@
 
 .lang-switch.en {
   background: url("/us.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 .lang-thumb {
