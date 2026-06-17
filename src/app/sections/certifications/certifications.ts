@@ -36,7 +36,7 @@ export class Certifications implements AfterViewInit, OnDestroy {
       titleKey: 'CERTIFICATIONS.ITEMS.PYTHON_TITLE',
       descriptionKey: 'CERTIFICATIONS.ITEMS.PYTHON_DESC',
       image: 'python_logo.png',
-      link: 'https://drive.google.com/file/d/1DjsFbKUtEDzJ2uJT17fMYu6aVeSJpxWi/view?usp=sharing'
+      link: 'Python_Certificate.pdf',
     }
   ];
 
