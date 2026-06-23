@@ -10,7 +10,6 @@
 
   <!-- NAVIGATION -->
   <nav class="nav-links" [class.open]="menuOpen" (click)="$event.stopPropagation()">
-
     <a (click)="navigateTo('home')">{{ 'NAV.HOME' | translate }}</a>
     <a (click)="navigateTo('projects')">{{ 'NAV.PROJECTS' | translate }}</a>
     <a (click)="navigateTo('about')">{{ 'NAV.ABOUT' | translate }}</a>
@@ -18,6 +17,18 @@
     <a (click)="navigateTo('contact')">{{ 'NAV.CONTACT' | translate }}</a>
     <a (click)="navigateTo('certifications')">{{ 'NAV.CERTIFICATIONS' | translate }}</a>
 
+    <!-- LANGUAGE TOGGLE MOBILE -->
+    <div class="lang mobile-only" (click)="$event.stopPropagation()">
+      <button
+        class="lang-switch"
+        type="button"
+        [class.en]="currentLang === 'en'"
+        (click)="setLang(currentLang === 'en' ? 'es' : 'en')"
+      >
+        <span class="lang-thumb"></span>
+      </button>
+    </div>
+    
     <!-- CV MOBILE -->
     <a
       class="cv-mobile"
@@ -28,7 +39,6 @@
     >
       {{ currentLang === 'en' ? 'Download CV' : 'Descargar CV' }}
     </a>
-
   </nav>
 
   <!-- CV DESKTOP -->
@@ -42,8 +52,8 @@
     {{ currentLang === 'en' ? 'Download CV' : 'Descargar CV' }}
   </a>
 
-  <!-- LANGUAGE TOGGLE -->
-  <div class="lang" (click)="$event.stopPropagation()">
+  <!-- LANGUAGE TOGGLE DESKTOP -->
+  <div class="lang desktop-only" (click)="$event.stopPropagation()">
     <button
       class="lang-switch"
       type="button"
